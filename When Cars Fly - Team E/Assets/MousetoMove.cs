@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MousetoMove : MonoBehaviour
 {
@@ -13,10 +14,15 @@ public Camera screenCamera;
 
  
 //The desired distance from the camera to the object
-float zDistance = 5.0f;
+public float zDistance;
 
 public bool fly;
- 
+//^^if this is true, the player has Y-axis movement. Otherwise they're locked to the X-axis. 
+
+public bool Grounded;
+
+public float SP;
+public Slider SPGauge;
 
 
 void Update () 
@@ -30,7 +36,7 @@ void Update ()
 
     // same thing, except that it only alters the x axis position.
     else
-    {this.transform.position = screenCamera.ScreenToWorldPoint(new Vector3(mousePos.x, 360, zDistance));}
+    {this.transform.position = screenCamera.ScreenToWorldPoint(new Vector3(mousePos.x, 530, zDistance));}
 
     if(Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1))
     {
@@ -38,9 +44,20 @@ void Update ()
         else{fly = true;}
     }
 
+    if(fly && Grounded == true){SP += 1 * Time.deltaTime; SPGauge.value = SP;}
+    else if(fly && Grounded == false){SP -= 1.3f * Time.deltaTime; SPGauge.value = SP;}
+
+    if(SP > 10){SP = 10;}
+    if(SP < 0){SP = 0;}
+
 
 }
 
+public void OnCollisionEnter(Collision collision)
+    {if(collision.gameObject.CompareTag("Road")){Grounded = true;}}
+
+public void OnCollisionExit(Collision collision)
+    {if(collision.gameObject.CompareTag("Road")){Grounded = false;}}
 
 
 }
