@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking.Types;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class CarHealth : MonoBehaviour
 {
     public float HP;
     public float iframes;

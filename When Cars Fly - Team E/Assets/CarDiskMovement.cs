@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Movement : MonoBehaviour
+public class CarDiskMovement : MonoBehaviour
 {
     public float playerspeed; public float speedmultiplier;
     public float distancetravelled; public float distancerounded; 
