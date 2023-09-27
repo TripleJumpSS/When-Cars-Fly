@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BreakableHazard
   - Road
+  - EndWall
   layers:
   - Default
   - TransparentFX
