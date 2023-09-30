@@ -36,7 +36,6 @@ public class TunnelPiece : MonoBehaviour
     {
         //get the distance between the pivot point and _endPoint
         float distance = Vector3.Distance(gameObject.transform.position,_endPoint.position);
-        Debug.Log("Piece Lenght: "+distance);
 
         return distance;
     }
