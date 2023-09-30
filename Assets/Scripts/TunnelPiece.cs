@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.UIElements;
 
 public class TunnelPiece : MonoBehaviour
 {
@@ -25,6 +21,7 @@ public class TunnelPiece : MonoBehaviour
     }
     void OnTriggerEnter(Collider collision)
     {
+        //if tunnelPiece hits the wall destroy it and send message to TunnelManager
         if (collision.gameObject.CompareTag("EndWall"))
         { 
             Destroy(gameObject);
@@ -37,6 +34,7 @@ public class TunnelPiece : MonoBehaviour
     }
     public float GetDistance()
     {
+        //get the distance between the pivot point and _endPoint
         float distance = Vector3.Distance(gameObject.transform.position,_endPoint.position);
         Debug.Log("Piece Lenght: "+distance);
 
