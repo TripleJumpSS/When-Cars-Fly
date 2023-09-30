@@ -12,12 +12,12 @@ public class PoolManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        _tunnelPiecePool = new ObjectPool<TunnelPiece>(AddNewBlasterShotToPool,
+        _tunnelPiecePool = new ObjectPool<TunnelPiece>(AddNewTunnelPiecetToPool,
             t => t.gameObject.SetActive(true),
             t => t.gameObject.SetActive(false));
     }
 
-    TunnelPiece AddNewBlasterShotToPool()
+    TunnelPiece AddNewTunnelPiecetToPool()
     {
         var tunnel = Instantiate(_tunnelPiecePrefab);
         tunnel.SetPool(_tunnelPiecePool);
