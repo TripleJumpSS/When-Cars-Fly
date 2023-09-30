@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -7,26 +9,28 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] Transform _startingPoint;
     [SerializeField] GameObject _endWall;
     [SerializeField] GameObject _pullingPoint;
-    [SerializeField] GameObject[] _tunnelPieces;
+    [SerializeField] TunnelPiece[] _tunnelPieces;
     [SerializeField] float _speed = 2.0f;
+    [SerializeField] List<TunnelPiece> _tunnelList = new List<TunnelPiece>();
     Rigidbody _rb;
-    Vector3 _summonPoint;
-    //List<GameObject> _tunnel = new List<GameObject>();
+    bool IsPieceDestroyed = false;
     Vector3 _direction = new Vector3(1,0,0);
+    
 
     void Awake()
     {
         _rb = _pullingPoint.GetComponent<Rigidbody>();
-        _summonPoint = _startingPoint.position + new Vector3 (5,0,0);
     }
-    void OnEnable()
-    {
-        StartCoroutine(StartMovement());
-    }
+
     void Update()
     {
         _rb.velocity = _direction * _speed;
-
+        if (IsPieceDestroyed == true)
+        {
+            RemoveFirstPieceFromList();
+            CreateNewPiece();
+        }
+        
     }
     void OnDrawGizmos() 
     {
@@ -37,24 +41,34 @@ public class TunnelManager : MonoBehaviour
         Gizmos.DrawLine(start, end);
         Gizmos.DrawSphere(summon, 0.5f);
     }
-    IEnumerator StartMovement() 
+    void CreateNewPiece()
     {
-        GrabBag<GameObject> grabBag = new GrabBag<GameObject>(_tunnelPieces);
 
-        while (true)
+        GrabBag<TunnelPiece> grabBag = new GrabBag<TunnelPiece>(_tunnelPieces);
+        int newPieceCount = _tunnelList.Count- 1;
+        Vector3 lastPieceEndPoint = _tunnelList[newPieceCount].transform.position;
+
+        var pieceFromGrabBag = grabBag.Grab();
+        if (pieceFromGrabBag == null)
         {
-
-            var pieceFromGrabBag = grabBag.Grab();
-            if (pieceFromGrabBag == null)
-            {
-                Debug.LogError("Unable to choose a random destination for the Bee. Stopping Movement");
-                yield break;
-            }
-            var piece = Instantiate(pieceFromGrabBag);
-            piece.transform.parent = _pullingPoint.transform;
-
-            yield return new WaitForSeconds(5.0f);
+            Debug.LogError("Unable to choose a random destination for the Bee. Stopping Movement");
         }
+        _tunnelList.Add(pieceFromGrabBag);
+
+         lastPieceEndPoint.x -= _tunnelList[newPieceCount].GetDistance();
+
+        Instantiate(_tunnelList[newPieceCount], lastPieceEndPoint, Quaternion.identity);
+        Debug.Log($"" + lastPieceEndPoint);
     }
 
+    void RemoveFirstPieceFromList()
+    {
+        _tunnelList.Remove(_tunnelList[0]);
+        IsPieceDestroyed = false;
+    }
+
+    public void SetIsPieceDestroyed(bool isdestroyed) 
+    {
+        IsPieceDestroyed = isdestroyed;
+    }
 }
