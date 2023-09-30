@@ -8,29 +8,20 @@ public class TunnelManager : MonoBehaviour
 {
     [SerializeField] Transform _startingPoint;
     [SerializeField] GameObject _endWall;
-    [SerializeField] GameObject _pullingPoint;
     [SerializeField] TunnelPiece[] _tunnelPieces;
+    [SerializeField] TunnelPiece _lastTunnelPiece;
     [SerializeField] float _speed = 2.0f;
-    [SerializeField] List<TunnelPiece> _tunnelList = new List<TunnelPiece>();
-    Rigidbody _rb;
     bool IsPieceDestroyed = false;
-    Vector3 _direction = new Vector3(1,0,0);
+    public Vector3 _lastTunnelPosition = Vector3.zero;
     
-
-    void Awake()
-    {
-        _rb = _pullingPoint.GetComponent<Rigidbody>();
-    }
 
     void Update()
     {
-        _rb.velocity = _direction * _speed;
         if (IsPieceDestroyed == true)
         {
-            RemoveFirstPieceFromList();
             CreateNewPiece();
+            IsPieceDestroyed = false;
         }
-        
     }
     void OnDrawGizmos() 
     {
@@ -43,28 +34,17 @@ public class TunnelManager : MonoBehaviour
     }
     void CreateNewPiece()
     {
-
         GrabBag<TunnelPiece> grabBag = new GrabBag<TunnelPiece>(_tunnelPieces);
-        int newPieceCount = _tunnelList.Count- 1;
-        Vector3 lastPieceEndPoint = _tunnelList[newPieceCount].transform.position;
-
         var pieceFromGrabBag = grabBag.Grab();
         if (pieceFromGrabBag == null)
         {
             Debug.LogError("Unable to choose a random destination for the Bee. Stopping Movement");
         }
-        _tunnelList.Add(pieceFromGrabBag);
 
-         lastPieceEndPoint.x -= _tunnelList[newPieceCount].GetDistance();
-
-        Instantiate(_tunnelList[newPieceCount], lastPieceEndPoint, Quaternion.identity);
-        Debug.Log($"" + lastPieceEndPoint);
-    }
-
-    void RemoveFirstPieceFromList()
-    {
-        _tunnelList.Remove(_tunnelList[0]);
-        IsPieceDestroyed = false;
+        _lastTunnelPosition = _lastTunnelPiece.transform.position - new Vector3(_lastTunnelPiece.GetDistance(),0.0f,0.0f)
+                    - new Vector3(pieceFromGrabBag.GetDistance(),0.0f,0.0f);
+         
+        _lastTunnelPiece = Instantiate(pieceFromGrabBag, _lastTunnelPosition, Quaternion.identity);
     }
 
     public void SetIsPieceDestroyed(bool isdestroyed) 

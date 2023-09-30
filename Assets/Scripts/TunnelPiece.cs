@@ -10,7 +10,7 @@ public class TunnelPiece : MonoBehaviour
     TunnelManager _tunnelManager;
     [SerializeField] Transform _endPoint;
     ObjectPool<TunnelPiece> _pool;
-    [SerializeField] float _speed = 2.0f;
+    float _speed = 10.0f;
     Vector3 _direction = new Vector3(1, 0, 0);
     Rigidbody _rb;
 
@@ -39,9 +39,13 @@ public class TunnelPiece : MonoBehaviour
     {
         float distance = Vector3.Distance(gameObject.transform.position,_endPoint.position);
         Debug.Log("Piece Lenght: "+distance);
+
         return distance;
     }
-
+    public void SetSpeed(float speed) 
+    { 
+        _speed = speed;
+    }
     public void SetPool(ObjectPool<TunnelPiece> pool)
     {
         _pool = pool;
