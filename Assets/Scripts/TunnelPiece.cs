@@ -43,6 +43,12 @@ public class TunnelPiece : MonoBehaviour
     { 
         _speed = speed;
     }
+
+    public void UpSpeed(float speed) 
+    { _speed += speed;}
+    public void DownSpeed(float speed) 
+    {_speed -= speed;}
+    
     public void SetPool(ObjectPool<TunnelPiece> pool)
     {
         _pool = pool;
