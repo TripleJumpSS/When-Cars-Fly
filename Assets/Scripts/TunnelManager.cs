@@ -1,6 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
 
 public class TunnelManager : MonoBehaviour
 {
@@ -10,11 +11,30 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] TunnelPiece _lastTunnelPiece;
     [SerializeField] float _speed = 2.0f;
     [SerializeField] List<TunnelPiece> _tunnelPiecesList = new List<TunnelPiece>();
+    [SerializeField] TextMeshProUGUI _distanceUI;
+    [SerializeField] float _distanceTaken = 0;
+    //testing
+    [SerializeField] GameObject _distanceMeter;
+    Rigidbody _rbDistanceMeter;
+    Vector3 _direction = new Vector3(1, 0, 0);
+
     bool IsPieceDestroyed = false;
     public Vector3 _lastTunnelPosition = Vector3.zero;
+    [SerializeField] GameObject _player;
 
+    private void Awake()
+    {
+        _distanceUI.text = _distanceTaken.ToString("F2");
+        _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
+    }
+    void OnEnable()
+    {
+        //StartCoroutine(DistanceCounter());
+    }
     void Update()
     {
+        _rbDistanceMeter.velocity = _direction * _speed;
+        _distanceUI.text = GetDistancePlayerTaken().ToString("F2");
         if (IsPieceDestroyed == true)
         {
             CreateNewPiece();
@@ -56,7 +76,22 @@ public class TunnelManager : MonoBehaviour
         _lastTunnelPiece = Instantiate(pieceFromGrabBag, _lastTunnelPosition, Quaternion.identity);
         _lastTunnelPiece.SetSpeed(_speed);
     }
-    
+    IEnumerator DistanceCounter() 
+    {
+        while (true)
+        {
+            _distanceTaken += _speed;
+            _distanceUI.text = _distanceTaken.ToString("F2");
+            yield return new WaitForSeconds(1.0f);
+        }
+
+    }
+    float GetDistancePlayerTaken() 
+    {
+        float distance = _distanceMeter.transform.position.x - _player.transform.position.x;
+
+        return distance;
+    }
     void SetSpeedToAll(float speed)
     {
         //set the speed to all tunnelPiece in the list
