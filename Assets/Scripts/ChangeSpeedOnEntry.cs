@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class ChangeSpeedOnEntry : MonoBehaviour
 {
-    [Header("Bool On = Decreased Speed ///// Bool Off = Increased Speed")]
-    public bool SpeedDown;
+    [Header("(A Minus Number will Speed Down)")]
+    public float ChangeSpeedByHowMuch;
     public GameObject TunnelManager; 
+    public bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
     
+    void Awake()
+    {TunnelManager = GameObject.Find("TunnelManager"); HaveIBeenUsedYet = false;}
+    //This allows the prefab to find the TunnelManager in the scene using it's name in the inspector.
+    //^ this means that renaming the TunnelManager will break this code.
+
+
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && HaveIBeenUsedYet == false)
         {
-            if(SpeedDown == true){TunnelManager.SendMessage("DownSpeedBy10");}
-            else{TunnelManager.SendMessage("UpSpeedBy5");}
+            HaveIBeenUsedYet = true;
+            TunnelManager.SendMessage("ChangeSpeed", ChangeSpeedByHowMuch);
         }
     }
 }

@@ -41,8 +41,8 @@ public class TunnelManager : MonoBehaviour
             RemovePieceFromList();  
         }
 
-        if(Input.GetKeyDown(KeyCode.A)){UpSpeedBy5();}
-        if(Input.GetKeyDown(KeyCode.S)){DownSpeedBy10();}
+        //if(Input.GetKeyDown(KeyCode.A)){UpSpeed(5);}
+        //if(Input.GetKeyDown(KeyCode.S)){DownSpeed(10);}
     }
 
     private void RemovePieceFromList()
@@ -130,21 +130,13 @@ public class TunnelManager : MonoBehaviour
         _speed = 50.0f;
     }
 
-    public void UpSpeedBy5()
+    public void ChangeSpeed(float changeby)
     {
         foreach (var tunnelPiece in _tunnelPiecesList)
         {
-            tunnelPiece.UpSpeed(5f);
+            tunnelPiece.UpSpeed(changeby);
         }
-        _speed += 5f;
-    }
-    public void DownSpeedBy10() 
-    {
-        foreach (var tunnelPiece in _tunnelPiecesList)
-        {
-            tunnelPiece.DownSpeed(10f);
-        }
-        _speed -= 10f;
+        _speed += changeby;
     }
 
 }
