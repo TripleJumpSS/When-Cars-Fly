@@ -40,6 +40,9 @@ public class TunnelManager : MonoBehaviour
             CreateNewPiece();
             RemovePieceFromList();  
         }
+
+        if(Input.GetKeyDown(KeyCode.A)){SetSpeedToFifty();}
+        if(Input.GetKeyDown(KeyCode.S)){SetSpeedToTwentyFive();}
     }
 
     private void RemovePieceFromList()

@@ -20,7 +20,7 @@ public float zDistance;
 public string State;
 
 
-void Start(){FrontFacing3D();}
+//void Start(){FrontFacing3D();}
 
 void Update () 
 {
