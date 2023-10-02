@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SeaMouseToMove : MonoBehaviour
+public class MouseToMove : MonoBehaviour
 {
 
 
@@ -20,7 +20,7 @@ public float zDistance;
 public string State;
 
 
-//void Start(){FrontFacing3D();}
+void Start(){FrontFacing3D();}
 
 void Update () 
 {
@@ -41,8 +41,8 @@ public void FrontFacing3D()
 {
     State = "FrontFacing3D";
     zDistance = 7;
-    screenCamera.transform.position = new Vector3(35, 2, -5);
-    screenCamera.transform.rotation = Quaternion.Euler(-15, 0, 0);
+    screenCamera.transform.position = new Vector3(18.5f, -1, -0.1f);
+    screenCamera.transform.rotation = Quaternion.Euler(-12, -90, 0);
     
 }
 
@@ -50,26 +50,26 @@ public void BackFacing3D()
 {
     State = "BackFacing3D";
     zDistance = 7;
-    screenCamera.transform.position = new Vector3(35, 7, 10);
-    screenCamera.transform.rotation = Quaternion.Euler(15, 180, 0);
+    screenCamera.transform.position = new Vector3(4.2f, -1, 0.1f);
+    screenCamera.transform.rotation = Quaternion.Euler(-21, 90, 0);
     
 }
 
 public void TopDown2D()
 {
     State = "TopDown2D";
-    zDistance = 11;
-    screenCamera.transform.position = new Vector3(35, 5, 20);
-    screenCamera.transform.rotation = Quaternion.Euler(90, 0, -180);
+    zDistance = 7;
+    screenCamera.transform.position = new Vector3(11.5f, 4.5f, 1.2f);
+    screenCamera.transform.rotation = Quaternion.Euler(67.5f, 180, 0);
     
 }
 
 public void SideScroll2D()
 {
     State = "SideScroll2D";
-    zDistance = 13;
-    screenCamera.transform.position = new Vector3(44, 4, 25);
-    screenCamera.transform.rotation = Quaternion.Euler(0, -90, 0);
+    zDistance = 8;
+    screenCamera.transform.position = new Vector3(11.5f, -1, 5.1f);
+    screenCamera.transform.rotation = Quaternion.Euler(-21, 180, 0);
     
 }
 

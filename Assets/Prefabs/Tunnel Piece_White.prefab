@@ -471,7 +471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endPoint: {fileID: 5320628036197452120}
-  _speed: 2
 --- !u!65 &1094157957462900768
 BoxCollider:
   m_ObjectHideFlags: 0
