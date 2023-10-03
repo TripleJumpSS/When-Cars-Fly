@@ -11,7 +11,7 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] GameObject _endWall;
     [SerializeField] TunnelPiece[] _tunnelPieces;
     [SerializeField] TunnelPiece _lastTunnelPiece;
-    [SerializeField] float _speed = 2.0f;
+    public float _speed = 2.0f;
     [SerializeField] List<TunnelPiece> _tunnelPiecesList = new List<TunnelPiece>();
     [SerializeField] TextMeshProUGUI _distanceUI;
     public Slider _SpeedSlider; public Slider _SharkSlider;

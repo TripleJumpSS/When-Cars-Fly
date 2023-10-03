@@ -110,5 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -10
+  ChangeSpeedByHowMuch: -5
   TunnelManager: {fileID: 0}
+  HaveIBeenUsedYet: 0
