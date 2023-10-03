@@ -22,6 +22,8 @@ public class TunnelManager : MonoBehaviour
     public Vector3 _lastTunnelPosition = Vector3.zero;
     [SerializeField] GameObject _player;
 
+    public float MaxSpeedCap; public float MinSpeedCap;
+
     private void Awake()
     {
         _distanceUI.text = _distanceTaken.ToString("F2");
@@ -43,6 +45,14 @@ public class TunnelManager : MonoBehaviour
 
         //if(Input.GetKeyDown(KeyCode.A)){UpSpeed(5);}
         //if(Input.GetKeyDown(KeyCode.S)){DownSpeed(10);}
+
+        if(_speed > MaxSpeedCap){_speed = MaxSpeedCap; 
+        foreach (var tunnelPiece in _tunnelPiecesList)
+        {tunnelPiece.SetSpeed(MaxSpeedCap);}}
+
+        if(_speed < MinSpeedCap){_speed = MinSpeedCap;
+        foreach (var tunnelPiece in _tunnelPiecesList)
+        {tunnelPiece.SetSpeed(MinSpeedCap);}}
     }
 
     private void RemovePieceFromList()

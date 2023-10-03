@@ -383,6 +383,8 @@ MonoBehaviour:
   _distanceMeter: {fileID: 449176441}
   _lastTunnelPosition: {x: 0, y: 0, z: 0}
   _player: {fileID: 100369797}
+  MaxSpeedCap: 50
+  MinSpeedCap: 10
 --- !u!4 &242683457
 Transform:
   m_ObjectHideFlags: 0
