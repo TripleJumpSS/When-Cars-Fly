@@ -29,9 +29,9 @@ public class SharkProximity : MonoBehaviour
         if(DistanceFromEnemy > 10){DistanceFromEnemy = 10;}
 
         if(PlayerSpeed < Orange)//aka they're in the red.
-        {DistanceFromEnemy -= 1 * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed;}
+        {DistanceFromEnemy -= 0.75f * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed;}
         if(PlayerSpeed >= Orange && PlayerSpeed < Yellow)//aka they're in the orange.
-        {DistanceFromEnemy -= 0.5f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange;}
+        {DistanceFromEnemy -= 0.35f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange;}
 
         if(PlayerSpeed >= Yellow && PlayerSpeed < Grellow)//aka they're in the yellow.
         {CurrentColour = "YELLOW"; ColouredBackground.color = cYellow;}
