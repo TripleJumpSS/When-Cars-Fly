@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TunnelManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] float _speed = 2.0f;
     [SerializeField] List<TunnelPiece> _tunnelPiecesList = new List<TunnelPiece>();
     [SerializeField] TextMeshProUGUI _distanceUI;
+    public Slider _SpeedSlider; public Slider _SharkSlider;
     [SerializeField] float _distanceTaken = 0;
     //testing
     [SerializeField] GameObject _distanceMeter;
@@ -26,7 +29,7 @@ public class TunnelManager : MonoBehaviour
 
     private void Awake()
     {
-        _distanceUI.text = _distanceTaken.ToString("F2");
+        _distanceUI.text =  _distanceTaken.ToString("F2");
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
     }
     void OnEnable()
@@ -36,7 +39,8 @@ public class TunnelManager : MonoBehaviour
     void Update()
     {
         _rbDistanceMeter.velocity = _direction * _speed;
-        _distanceUI.text = GetDistancePlayerTaken().ToString("F2");
+        _distanceUI.text = "Points: " + GetDistancePlayerTaken().ToString("F2");
+        _SpeedSlider.value = _speed;
         if (IsPieceDestroyed == true)
         {
             CreateNewPiece();
