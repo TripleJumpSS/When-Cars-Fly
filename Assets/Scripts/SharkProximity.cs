@@ -17,6 +17,7 @@ public class SharkProximity : MonoBehaviour
     {
         Lv1();
         DistanceFromEnemy = 5;
+        PlayerSpeed = TunnelManager.GetComponent<TunnelManager>()._speed;
     }
 
     // Update is called once per frame
@@ -29,15 +30,15 @@ public class SharkProximity : MonoBehaviour
 
         if(PlayerSpeed < Orange)//aka they're in the red.
         {DistanceFromEnemy -= 1 * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed;}
-        if(PlayerSpeed > Orange && PlayerSpeed < Yellow)//aka they're in the orange.
+        if(PlayerSpeed >= Orange && PlayerSpeed < Yellow)//aka they're in the orange.
         {DistanceFromEnemy -= 0.5f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange;}
 
-        if(PlayerSpeed > Yellow && PlayerSpeed < Grellow)//aka they're in the yellow.
+        if(PlayerSpeed >= Yellow && PlayerSpeed < Grellow)//aka they're in the yellow.
         {CurrentColour = "YELLOW"; ColouredBackground.color = cYellow;}
 
-        if(PlayerSpeed > Grellow && PlayerSpeed < Green)//aka they're in the grellow.
+        if(PlayerSpeed >= Grellow && PlayerSpeed < Green)//aka they're in the grellow.
         {DistanceFromEnemy += 0.5f * Time.deltaTime; CurrentColour = "GRELLOW"; ColouredBackground.color = cGrellow;}
-        if(PlayerSpeed > Green)//aka they're in the green.
+        if(PlayerSpeed >= Green)//aka they're in the green.
         {DistanceFromEnemy += 1 * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cGreen;}
 
         SharkDistanceUI.value = DistanceFromEnemy;
