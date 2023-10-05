@@ -10,4 +10,7 @@ public class SharkToggleTracking : MonoBehaviour
 
     public void TrackingOff()
     {SharkParent.SendMessage("StopTrack");}
+
+    public void ChaseOff()
+    {SharkParent.SendMessage("EndChase");}
 }

@@ -14,7 +14,7 @@ public class TunnelManager : MonoBehaviour
     public float _speed = 2.0f;
     [SerializeField] List<TunnelPiece> _tunnelPiecesList = new List<TunnelPiece>();
     [SerializeField] TextMeshProUGUI _distanceUI;
-    public Slider _SpeedSlider; public Slider _SharkSlider;
+    public Slider _SpeedSlider;
     [SerializeField] float _distanceTaken = 0;
     //testing
     [SerializeField] GameObject _distanceMeter;
@@ -151,6 +151,15 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.UpSpeed(changeby);
         }
         _speed += changeby;
+    }
+
+    public void SetSpeedToYellow(float Yellow) 
+    {
+        foreach (var tunnelPiece in _tunnelPiecesList)
+        {
+            tunnelPiece.SetSpeed(Yellow);
+        }
+        _speed = Yellow;
     }
 
 }

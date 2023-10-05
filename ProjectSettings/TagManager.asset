@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BreakableHazard
   - Road
   - EndWall
+  - SpeedChanger
   layers:
   - Default
   - TransparentFX

@@ -9,13 +9,14 @@ public class SharkLaw : MonoBehaviour
     public float speed; //How quickly the shark copies the player's x/y position.
     public Vector3 Pos; //The player's x position, y position, and distance is the z position.
     public bool TrackPlayer; //Whether or not the shark should copy the player's x/y position. Triggered by the SharkToggleTracking script.
+    public GameObject GameManager;
 
     void Update()
     {
         if(TrackPlayer == true)
         {
             //Sets Pos as the player's x position, y position, and distance is the z position every frame.
-            Pos = new Vector3(player.transform.position.x, player.transform.position.y, distance);
+            Pos = new Vector3(distance, player.transform.position.y, player.transform.position.z);
             
             //Transitions smoothly between the shark's current position and the Pos position. 
             transform.position = Vector3.Lerp(transform.position, Pos, speed * Time.deltaTime);
@@ -24,4 +25,5 @@ public class SharkLaw : MonoBehaviour
 
     public void Track(){TrackPlayer = true;}
     public void StopTrack(){TrackPlayer = false;}
+    public void EndChase(){GameManager.GetComponent<SharkProximity>().SurvivedTheChase();}
 }
