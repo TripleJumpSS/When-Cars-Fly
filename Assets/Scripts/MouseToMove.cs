@@ -50,7 +50,7 @@ public void BackFacing3D()
 {
     State = "BackFacing3D";
     zDistance = 7;
-    screenCamera.transform.position = new Vector3(4.2f, -1, 0.1f);
+    screenCamera.transform.position = new Vector3(4.2f, 2, 0.1f);
     screenCamera.transform.rotation = Quaternion.Euler(-21, 90, 0);
     
 }

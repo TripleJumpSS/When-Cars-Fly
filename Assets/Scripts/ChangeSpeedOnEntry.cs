@@ -9,6 +9,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     public float ChangeSpeedByHowMuch;
     public GameObject TunnelManager; 
     public bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
+    public bool DestroyOnContact; 
     public GameObject GameManager;
     
     void Awake()
@@ -29,6 +30,9 @@ public class ChangeSpeedOnEntry : MonoBehaviour
         {
             HaveIBeenUsedYet = true;
             TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch);
+
+            if(DestroyOnContact == true)
+            {Destroy(this.gameObject);}
         }
     }
 

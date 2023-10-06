@@ -114,3 +114,5 @@ MonoBehaviour:
   ChangeSpeedByHowMuch: 3
   TunnelManager: {fileID: 0}
   HaveIBeenUsedYet: 0
+  DestroyOnContact: 1
+  GameManager: {fileID: 0}
