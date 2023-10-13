@@ -32,10 +32,6 @@ public class TunnelManager : MonoBehaviour
         _distanceUI.text =  _distanceTaken.ToString("F2");
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
     }
-    void OnEnable()
-    {
-        //StartCoroutine(DistanceCounter());
-    }
     void Update()
     {
         _rbDistanceMeter.velocity = _direction * _speed;
@@ -93,16 +89,6 @@ public class TunnelManager : MonoBehaviour
         _lastTunnelPiece = Instantiate(pieceFromGrabBag, _lastTunnelPosition, Quaternion.identity);
         _lastTunnelPiece.SetSpeed(_speed);
     }
-    IEnumerator DistanceCounter() 
-    {
-        while (true)
-        {
-            _distanceTaken += _speed;
-            _distanceUI.text = _distanceTaken.ToString("F2");
-            yield return new WaitForSeconds(1.0f);
-        }
-
-    }
     float GetDistancePlayerTaken() 
     {
         float distance = _distanceMeter.transform.position.x - _player.transform.position.x;
@@ -144,13 +130,13 @@ public class TunnelManager : MonoBehaviour
         _speed = 50.0f;
     }
 
-    public void ChangeSpeed(float changeby)
+    public void ChangeSpeed(float changeBy)
     {
         foreach (var tunnelPiece in _tunnelPiecesList)
         {
-            tunnelPiece.UpSpeed(changeby);
+            tunnelPiece.UpSpeed(changeBy);
         }
-        _speed += changeby;
+        _speed += changeBy;
     }
 
     public void SetSpeedToYellow(float Yellow) 
