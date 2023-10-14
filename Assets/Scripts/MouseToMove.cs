@@ -60,7 +60,7 @@ public void TopDown2D()
     State = "TopDown2D";
     zDistance = 7;
     screenCamera.transform.position = new Vector3(11.5f, 4.5f, 1.2f);
-    screenCamera.transform.rotation = Quaternion.Euler(67.5f, 180, 0);
+    screenCamera.transform.rotation = Quaternion.Euler(90f, 180, 0);
     
 }
 

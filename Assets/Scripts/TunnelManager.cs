@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro.EditorUtilities;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +13,7 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] GameObject _endWall;
     [SerializeField] TunnelPiece[] _tunnelPieces;
     [SerializeField] TunnelPiece _lastTunnelPiece;
-    public float _speed = 2.0f;
+    public float _speed = 2.0f; 
     [SerializeField] List<TunnelPiece> _tunnelPiecesList = new List<TunnelPiece>();
     [SerializeField] TextMeshProUGUI _distanceUI;
     public Slider _SpeedSlider;
@@ -24,6 +26,9 @@ public class TunnelManager : MonoBehaviour
     bool IsPieceDestroyed = false;
     public Vector3 _lastTunnelPosition = Vector3.zero;
     [SerializeField] GameObject _player;
+    [SerializeField] GameObject _plane;
+    [SerializeField] GameObject _bubbles;
+    [SerializeField] GameObject gamemanager;
 
     public float MaxSpeedCap; public float MinSpeedCap;
 
@@ -31,6 +36,8 @@ public class TunnelManager : MonoBehaviour
     {
         _distanceUI.text =  _distanceTaken.ToString("F2");
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
+        SetSpeedToTwentyFive();
+        VisualsThatChangeBasedOnSpeed();
     }
     void OnEnable()
     {
@@ -133,6 +140,7 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.SetSpeed(25.0f);
         }
         _speed = 25.0f;
+        VisualsThatChangeBasedOnSpeed();
     }
     [ContextMenu(nameof(SetSpeedToFifty))]
     void SetSpeedToFifty() 
@@ -142,6 +150,7 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.SetSpeed(50.0f);
         }
         _speed = 50.0f;
+        VisualsThatChangeBasedOnSpeed();
     }
 
     public void ChangeSpeed(float changeby)
@@ -151,6 +160,7 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.UpSpeed(changeby);
         }
         _speed += changeby;
+        VisualsThatChangeBasedOnSpeed();
     }
 
     public void SetSpeedToYellow(float Yellow) 
@@ -160,6 +170,21 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.SetSpeed(Yellow);
         }
         _speed = Yellow;
+        VisualsThatChangeBasedOnSpeed();
+    }
+
+    public void VisualsThatChangeBasedOnSpeed()
+    {
+        //_plane;
+        _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
+
+        float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
+        if(_speed < yellow){_bubbles.GetComponent<ParticleSystem>().emissionRate = 0;}
+        else{_bubbles.GetComponent<ParticleSystem>().emissionRate = _speed / 1.5f;}
+
+
+        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;
+        
     }
 
 }

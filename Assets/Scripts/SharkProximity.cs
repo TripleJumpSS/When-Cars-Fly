@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class SharkProximity : MonoBehaviour
@@ -14,13 +16,17 @@ public class SharkProximity : MonoBehaviour
     public string CurrentColour; public Image ColouredBackground;
     public Color cRed; public Color cOrange; public Color cYellow; public Color cGrellow; public Color cGreen;
     public bool Chased; public GameObject Shark;
+    public float Exposure; public bool Pinch;
+    public GameObject RedLight;
 
     void Start()
     {
-        Lv1();
+        Lv2();
         DistanceFromEnemy = 5;
         PlayerSpeed = TunnelManager.GetComponent<TunnelManager>()._speed;
         Shark.SetActive(false);
+        Exposure = 1.37f;
+        RenderSettings.skybox.SetFloat("_Exposure", Exposure);
     }
 
     // Update is called once per frame
@@ -34,9 +40,9 @@ public class SharkProximity : MonoBehaviour
     if(Chased == false)
     {
         if(PlayerSpeed < Orange)//aka they're in the red.
-        {DistanceFromEnemy -= 0.75f * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed;}
+        {DistanceFromEnemy -= 0.75f * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed; if(Pinch){DistanceFromEnemy += 0.60f * Time.deltaTime;}}
         if(PlayerSpeed >= Orange && PlayerSpeed < Yellow)//aka they're in the orange.
-        {DistanceFromEnemy -= 0.35f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange;}
+        {DistanceFromEnemy -= 0.45f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange; if(Pinch){DistanceFromEnemy += 0.30f * Time.deltaTime;}}
 
         if(PlayerSpeed >= Yellow && PlayerSpeed < Grellow)//aka they're in the yellow.
         {CurrentColour = "YELLOW"; ColouredBackground.color = cYellow;}
@@ -47,7 +53,12 @@ public class SharkProximity : MonoBehaviour
         {DistanceFromEnemy += 1 * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cGreen;}
     }
 
+    
+
         SharkDistanceUI.value = DistanceFromEnemy;
+        if(DistanceFromEnemy < 3 || Chased){Exposure = Mathf.Lerp(Exposure, 0.25f, 3 * Time.deltaTime); Pinch = true;}
+        else{Exposure = Mathf.Lerp(Exposure, 1.37f, 3 * Time.deltaTime); Pinch = false;}
+        RenderSettings.skybox.SetFloat("_Exposure", Exposure);
 
     }
 
@@ -64,6 +75,7 @@ public class SharkProximity : MonoBehaviour
 
         
     }
+
 
     public void SurvivedTheChase()
     {
