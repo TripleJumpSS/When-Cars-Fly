@@ -27,7 +27,7 @@ public class TunnelManager : MonoBehaviour
     public Vector3 _lastTunnelPosition = Vector3.zero;
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _plane;
-    [SerializeField] GameObject _bubbles;
+    [SerializeField] GameObject _bubbles; [SerializeField] GameObject playerspeedparticles;
     [SerializeField] GameObject gamemanager;
 
     public float MaxSpeedCap; public float MinSpeedCap;
@@ -38,6 +38,7 @@ public class TunnelManager : MonoBehaviour
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
         SetSpeedToTwentyFive();
         VisualsThatChangeBasedOnSpeed();
+        playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = 0;
     }
     void OnEnable()
     {
@@ -181,6 +182,10 @@ public class TunnelManager : MonoBehaviour
         float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
         if(_speed < yellow){_bubbles.GetComponent<ParticleSystem>().emissionRate = 0;}
         else{_bubbles.GetComponent<ParticleSystem>().emissionRate = _speed / 1.5f;}
+
+        float grellow = gamemanager.GetComponent<SharkProximity>().Grellow;
+        if(_speed < grellow){playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = 0;}
+        else{playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = _speed;}
 
 
         _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;

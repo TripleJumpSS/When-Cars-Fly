@@ -17,7 +17,7 @@ public class SharkProximity : MonoBehaviour
     public Color cRed; public Color cOrange; public Color cYellow; public Color cGrellow; public Color cGreen;
     public bool Chased; public GameObject Shark;
     public float Exposure; public bool Pinch;
-    public GameObject RedLight;
+    //public GameObject RedLight;
 
     void Start()
     {
