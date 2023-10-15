@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeSpeedOnEntry : MonoBehaviour
@@ -13,16 +10,19 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     public GameObject GameManager;
     
     void Awake()
-    {TunnelManager = GameObject.Find("TunnelManager"); HaveIBeenUsedYet = false;
-    //This allows the prefab to find the TunnelManager in the scene using it's name in the inspector.
-    //^ this means that renaming the TunnelManager will break this code.
+    {   
+        TunnelManager = GameObject.Find("TunnelManager"); 
+        HaveIBeenUsedYet = false;
+        //This allows the prefab to find the TunnelManager in the scene using it's name in the inspector.
+        //^ this means that renaming the TunnelManager will break this code.
 
     GameManager = GameObject.Find("Game Manager"); Player = GameObject.Find("Player"); 
     bool ChasingInProgress = GameManager.GetComponent<SharkProximity>().Chased;
     if (ChasingInProgress == true) {Destroy(this.gameObject);} 
 
+        if (ChasingInProgress == true)
+                Destroy(this.gameObject);
     }
-
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,7 +37,4 @@ public class ChangeSpeedOnEntry : MonoBehaviour
             {Player.SendMessage("HIT");}
         }
     }
-
-
-
 }
