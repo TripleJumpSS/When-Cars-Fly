@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30254662, g: 0.79215145, b: 0.89868546, a: 1}
+  m_IndirectSpecularColor: {r: 0.24323326, g: 0.65528023, b: 0.7546501, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,12 +307,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32520a9cbaefdb04f9e8732b3840cac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseposition: {fileID: 0}
+  mouseposition: {fileID: 1388005346}
   mousepositioncube: {fileID: 0}
   screenCamera: {fileID: 1012470674}
   zDistance: 7
   StarterZ: 0
-  lateralspeed: 0
+  lateralspeed: 10
   State: 
   strength: 0
 --- !u!1 &113239890
@@ -694,10 +694,10 @@ MonoBehaviour:
   _distanceMeter: {fileID: 449176441}
   _lastTunnelPosition: {x: 0, y: 0, z: 0}
   _player: {fileID: 919132147827435158}
-  _plane: {fileID: 0}
-  _bubbles: {fileID: 0}
-  playerspeedparticles: {fileID: 0}
-  gamemanager: {fileID: 0}
+  _plane: {fileID: 1118286091}
+  _bubbles: {fileID: 641940980}
+  playerspeedparticles: {fileID: 262105402}
+  gamemanager: {fileID: 2023448513}
   MaxSpeedCap: 50
   MinSpeedCap: 10
 --- !u!4 &242683457
@@ -12273,7 +12273,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -7.695, y: -90, z: 0}
 --- !u!114 &1012470677
 MonoBehaviour:
@@ -14700,7 +14700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784999343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.8, y: 0, z: 0}
+  m_LocalPosition: {x: 90.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

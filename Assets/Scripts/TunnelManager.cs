@@ -146,7 +146,7 @@ public class TunnelManager : MonoBehaviour
         {
             tunnelPiece.UpSpeed(changeBy);
         }
-        _speed += changeby;
+        _speed += changeBy;
         VisualsThatChangeBasedOnSpeed();
     }
 
