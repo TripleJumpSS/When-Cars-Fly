@@ -16,7 +16,7 @@ public Camera screenCamera;
 
  
 //The desired distance from the camera to the object
-public float zDistance; public float lateralspeed;
+public float zDistance; public float StarterZ; public float lateralspeed;
 
 public string State; public float strength;
 
@@ -55,6 +55,38 @@ void Update ()
 
 }
 
+public IEnumerator HIT()
+{
+    StarterZ = zDistance;
+    zDistance += 7;
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", true);
+    yield return new WaitForSeconds(0.5f);
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", false);
+    yield return new WaitForSeconds(0.5f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1; yield return new WaitForSeconds(0.2f);
+    zDistance -= 1;
+    
+}
+
+public IEnumerator BOOST()
+{
+    StarterZ = zDistance;
+    zDistance -= 5;
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", true);
+    yield return new WaitForSeconds(0.5f);
+    zDistance += 1; yield return new WaitForSeconds(0.1f);
+    zDistance += 1; yield return new WaitForSeconds(0.1f);
+    zDistance += 1; yield return new WaitForSeconds(0.1f);
+    zDistance += 1; yield return new WaitForSeconds(0.1f);
+    zDistance += 1;
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
+    
+}
 
 
 public void FrontFacing3D()
