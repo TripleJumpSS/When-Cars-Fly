@@ -3,25 +3,27 @@ using UnityEngine;
 public class ChangeSpeedOnEntry : MonoBehaviour
 {
     [Header("(A Minus Number will Speed Down)")]
-    public float ChangeSpeedByHowMuch;
-    public GameObject TunnelManager;  public GameObject Player; 
-    public bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
-    public bool DestroyOnContact; 
-    public GameObject GameManager;
+    [SerializeField] float ChangeSpeedByHowMuch;
+    GameObject TunnelManager;  
+    GameObject Player;
+    GameObject GameManager;
+    bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
+    public bool DestroyOnContact;
+    AudioSource _hitSoundEffect;
+    Renderer _renderer;
     
     void Awake()
     {   
-        TunnelManager = GameObject.Find("TunnelManager"); 
         HaveIBeenUsedYet = false;
-        //This allows the prefab to find the TunnelManager in the scene using it's name in the inspector.
-        //^ this means that renaming the TunnelManager will break this code.
+        TunnelManager = GameObject.Find("TunnelManager"); 
+        GameManager = GameObject.Find("Game Manager"); 
+        Player = GameObject.Find("Player");
+        _hitSoundEffect = GetComponent<AudioSource>();
+        _renderer = GetComponent<Renderer>();
 
-    GameManager = GameObject.Find("Game Manager"); Player = GameObject.Find("Player"); 
-    bool ChasingInProgress = GameManager.GetComponent<SharkProximity>().Chased;
-    if (ChasingInProgress == true) {Destroy(this.gameObject);} 
-
+        bool ChasingInProgress = GameManager.GetComponent<SharkProximity>().Chased;
         if (ChasingInProgress == true)
-                Destroy(this.gameObject);
+                Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,10 +33,18 @@ public class ChangeSpeedOnEntry : MonoBehaviour
             HaveIBeenUsedYet = true;
             TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch);
 
-            if(DestroyOnContact == true)
-            {Destroy(this.gameObject); Player.SendMessage("BOOST");}
+            if (_hitSoundEffect != null)
+                _hitSoundEffect.Play();
             else
-            {Player.SendMessage("HIT");}
+                Debug.LogError("Need to add audio source to object");
+
+            if (DestroyOnContact == true)
+            {
+                _renderer.enabled= false;
+                Player.SendMessage("BOOST");
+            }
+            else
+                Player.SendMessage("HIT");
         }
     }
 }
