@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,9 +31,9 @@ public class TunnelManager : MonoBehaviour
 
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _plane;
-    [SerializeField] GameObject _bubbles; 
-    [SerializeField] GameObject playerspeedparticles;
     [SerializeField] GameObject gamemanager;
+    [SerializeField] ParticleSystem _bubbles;
+    [SerializeField] ParticleSystem _playerSpeedParticles;
 
     public float MaxSpeedCap; public float MinSpeedCap;
 
@@ -49,7 +48,8 @@ public class TunnelManager : MonoBehaviour
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
         SetSpeedToTwentyFive();
         VisualsThatChangeBasedOnSpeed();
-        playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = 0;
+        var emission = _playerSpeedParticles.emission;
+            emission.rateOverTime = 0f;
         _tunnelPieceGrabBag = new GrabBag<TunnelPiece>(_stageOnePieces);
     }
     void Update()
@@ -57,6 +57,7 @@ public class TunnelManager : MonoBehaviour
         _rbDistanceMeter.velocity = _direction * _speed;
         _distanceUI.text = "Points: " + GetDistancePlayerTaken().ToString("F2");
         _SpeedSlider.value = _speed;
+
         if (IsPieceDestroyed == true)
         {
             CreateNewPiece();
@@ -70,8 +71,8 @@ public class TunnelManager : MonoBehaviour
             CheckAndSetupStage(_stageFourPoint, _stageFourPieces);      //STAGE FOUR
         }
 
-        //if(Input.GetKeyDown(KeyCode.A)){UpSpeed(5);}
-        //if(Input.GetKeyDown(KeyCode.S)){DownSpeed(10);}
+        //if(Input.GetKeyDown(KeyCode.A)) UpSpeed(5);
+        //if(Input.GetKeyDown(KeyCode.S)) DownSpeed(10);
 
         CheckAndSetSpeedCaps();
     }
@@ -111,7 +112,6 @@ public class TunnelManager : MonoBehaviour
 
     void CreateNewPiece()
     {
-
         //grab a tunnelPice from the grabBag
         var pieceFromGrabBag = _tunnelPieceGrabBag.Grab();
         if (pieceFromGrabBag == null)
@@ -126,8 +126,6 @@ public class TunnelManager : MonoBehaviour
         //create new tunnelPiece in scene and set its speed to the TunnelManagers speed
         _lastTunnelPiece = Instantiate(pieceFromGrabBag, _lastTunnelPosition, Quaternion.identity);
         _lastTunnelPiece.SetSpeed(_speed);
-
-
     }
     void CheckAndSetupStage(float stage, TunnelPiece[] list)
     {
@@ -136,7 +134,7 @@ public class TunnelManager : MonoBehaviour
     }
     bool IsNewStage()
     {
-        int distance = (int)GetDistancePlayerTaken();
+        int distance = (int)GetDistancePlayerTaken();//MUST BE INTEGER!!!!
         if (distance == _stageTwoPoint || distance == _stageThreePoint || distance == _stageFourPoint)
             _isNewStage = true;
         else
@@ -160,9 +158,9 @@ public class TunnelManager : MonoBehaviour
         _speed = speed;
     }
 
-    public void SetIsPieceDestroyed(bool isdestroyed) 
+    public void SetIsPieceDestroyed(bool isDestroyed) 
     {
-        IsPieceDestroyed = isdestroyed;
+        IsPieceDestroyed = isDestroyed;
     }
     //========== FOR TESTING PURPOSES ======================
     [ContextMenu(nameof(SetSpeedToTwentyFive))]
@@ -206,27 +204,26 @@ public class TunnelManager : MonoBehaviour
         VisualsThatChangeBasedOnSpeed();
     }
 
-    public void VisualsThatChangeBasedOnSpeed()
+    void VisualsThatChangeBasedOnSpeed()
     {
         _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
 
         float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
+        var emissionBubble = _bubbles.emission;
 
         if(_speed < yellow)
-            _bubbles.GetComponent<ParticleSystem>().emissionRate = 0;
+            emissionBubble.rateOverTime = 0f;
         else
-            _bubbles.GetComponent<ParticleSystem>().emissionRate = _speed / 1.5f;
+            emissionBubble.rateOverTime = _speed / 1.5f;
 
         float grellow = gamemanager.GetComponent<SharkProximity>().Grellow;
+        var emissionPlayer = _playerSpeedParticles.emission;
 
         if(_speed < grellow)
-            playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = 0;
+            emissionPlayer.rateOverTime = 0f;
         else
-            playerspeedparticles.GetComponent<ParticleSystem>().emissionRate = _speed;
+            emissionPlayer.rateOverTime = _speed;
 
-
-        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;
-        
+        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;    
     }
-
 }
