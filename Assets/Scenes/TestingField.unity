@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24323326, g: 0.65528023, b: 0.7546501, a: 1}
+  m_IndirectSpecularColor: {r: 0.30254632, g: 0.79215074, b: 0.8986853, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -674,25 +674,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingPoint: {fileID: 1481777997}
   _endWall: {fileID: 1784999343}
-  _tunnelPieces:
-  - {fileID: 8795003348036517362, guid: d53bc4ccb4f92bd4ba6fde6b8c5c1754, type: 3}
-  - {fileID: 2118545516872468293, guid: fac8a95950cf4514887010f6c6c73d5f, type: 3}
-  - {fileID: 2710719620358725796, guid: b1cb5d379fd8dc848abdb39374065ead, type: 3}
+  _stageOnePieces:
   - {fileID: 1416287828791227191, guid: 6276e4665e675f0468844aad300f4d79, type: 3}
+  - {fileID: 1416287828791227191, guid: 6276e4665e675f0468844aad300f4d79, type: 3}
+  _stageTwoPieces:
+  - {fileID: 2710719620358725796, guid: b1cb5d379fd8dc848abdb39374065ead, type: 3}
+  - {fileID: 2710719620358725796, guid: b1cb5d379fd8dc848abdb39374065ead, type: 3}
+  _stageThreePieces:
+  - {fileID: 2118545516872468293, guid: fac8a95950cf4514887010f6c6c73d5f, type: 3}
+  - {fileID: 2118545516872468293, guid: fac8a95950cf4514887010f6c6c73d5f, type: 3}
+  _stageFourPieces:
+  - {fileID: 8795003348036517362, guid: d53bc4ccb4f92bd4ba6fde6b8c5c1754, type: 3}
+  - {fileID: 8795003348036517362, guid: d53bc4ccb4f92bd4ba6fde6b8c5c1754, type: 3}
   _lastTunnelPiece: {fileID: 309657948}
-  _speed: 30
-  _tunnelPiecesList:
-  - {fileID: 2085269161}
+  _mainTunnelList:
   - {fileID: 767447129}
   - {fileID: 613108628}
   - {fileID: 793782320}
   - {fileID: 803287678}
   - {fileID: 309657948}
   _distanceUI: {fileID: 290480851}
-  _SpeedSlider: {fileID: 702351048}
   _distanceTaken: 0
   _distanceMeter: {fileID: 449176441}
+  _speed: 30
   _lastTunnelPosition: {x: 0, y: 0, z: 0}
+  _SpeedSlider: {fileID: 702351048}
   _player: {fileID: 919132147827435158}
   _plane: {fileID: 1118286091}
   _bubbles: {fileID: 641940980}
@@ -708,7 +714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242683455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15953,17 +15959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083500705}
   m_CullTransparentMesh: 1
---- !u!114 &2085269161 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8795003348036517362, guid: d53bc4ccb4f92bd4ba6fde6b8c5c1754, type: 3}
-  m_PrefabInstance: {fileID: 62376180}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ebe0bd923e22d419b1900e1a3113cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2102584414
 GameObject:
   m_ObjectHideFlags: 0
