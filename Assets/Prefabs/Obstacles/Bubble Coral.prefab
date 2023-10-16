@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2183846646991829457}
   m_Layer: 0
   m_Name: Bubble Coral
-  m_TagString: Untagged
+  m_TagString: SpeedChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

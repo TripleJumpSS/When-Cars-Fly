@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tunnel Scene.unity
+    guid: a3b50204cbe665b40af98cad8d5b8764
   m_configObjects: {}

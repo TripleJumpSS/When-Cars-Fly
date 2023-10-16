@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5082487247819351479}
   m_Layer: 0
   m_Name: Rock_Tall
-  m_TagString: Untagged
+  m_TagString: SpeedChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1

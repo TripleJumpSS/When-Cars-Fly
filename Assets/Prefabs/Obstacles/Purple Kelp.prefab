@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 791734630858398159}
   m_Layer: 0
   m_Name: Purple Kelp
-  m_TagString: Untagged
+  m_TagString: SpeedChanger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
