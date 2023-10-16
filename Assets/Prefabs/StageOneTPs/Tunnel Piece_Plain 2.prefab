@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 7042742194390866324}
   - component: {fileID: 1370808135915741777}
   m_Layer: 0
-  m_Name: Tunnel Piece_Plain
+  m_Name: Tunnel Piece_Plain 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2386,15 +2386,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220287171635084592, guid: 506da8ae48e1cff4ebb67585573ba9f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1175332
+      value: -2.1175337
       objectReference: {fileID: 0}
     - target: {fileID: 3220287171635084592, guid: 506da8ae48e1cff4ebb67585573ba9f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.928257
+      value: 2.071743
       objectReference: {fileID: 0}
     - target: {fileID: 3220287171635084592, guid: 506da8ae48e1cff4ebb67585573ba9f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.421822
+      value: 8.078178
       objectReference: {fileID: 0}
     - target: {fileID: 3220287171635084592, guid: 506da8ae48e1cff4ebb67585573ba9f2, type: 3}
       propertyPath: m_LocalRotation.w
