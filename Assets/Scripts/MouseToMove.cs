@@ -138,12 +138,16 @@ public void SideScroll2D()
 
 public void FixZPositionOnTransition()
 {
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", false);
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
+    StopCoroutine("BOOST"); StopCoroutine("HIT");
+    
     switch (State)
     {
-        case "FrontFacing3D": StopCoroutine("BOOST"); StopCoroutine("HIT"); FrontFacing3D(); break;
-        case "BackFacing3D": StopCoroutine("BOOST"); StopCoroutine("HIT"); BackFacing3D(); break;
-        case "TopDown2D": StopCoroutine("BOOST"); StopCoroutine("HIT"); TopDown2D(); break;
-        case "SideScroll2D": StopCoroutine("BOOST"); StopCoroutine("HIT"); SideScroll2D(); break;
+        case "FrontFacing3D":  FrontFacing3D(); break;
+        case "BackFacing3D": BackFacing3D(); break;
+        case "TopDown2D": TopDown2D(); break;
+        case "SideScroll2D": SideScroll2D(); break;
         
         default: print("Don't panic but INVALID STATE FOR THE FIXZPOSITION ON THE PLAYER MOVEMENT SCRIPT! EVERYONE STAY CALMMMMMMMMMMMMMMMMMMMMMM!!!!"); break; 
     }
