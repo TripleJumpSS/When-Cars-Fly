@@ -8,7 +8,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     GameObject Player;
     GameObject GameManager;
     bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
-    public bool DestroyOnContact;
+    //public bool DestroyOnContact;
     AudioSource _hitSoundEffect;
     Renderer _renderer;
     
@@ -31,17 +31,23 @@ public class ChangeSpeedOnEntry : MonoBehaviour
         if(other.tag == "Player" && HaveIBeenUsedYet == false)
         {
             if(Player.GetComponent<MouseToMove>().iFrames == true && ChangeSpeedByHowMuch <= 0){return;}
+
+
             HaveIBeenUsedYet = true;
+            
             TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch);
+            
+            if(GameManager.GetComponent<SharkProximity>().Pinch && ChangeSpeedByHowMuch > 0)
+            {TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch / 1.5f);}
 
             if (_hitSoundEffect != null)
                 _hitSoundEffect.Play();
             else
                 Debug.LogError("Need to add audio source to object");
 
-            if (DestroyOnContact == true)
+            if (ChangeSpeedByHowMuch > 0) //(DestroyOnContact == true)
             {
-                _renderer.enabled= false;
+                //_renderer.enabled= false;
                 Player.SendMessage("BOOST");
             }
             else

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24323413, g: 0.6552806, b: 0.75465274, a: 1}
+  m_IndirectSpecularColor: {r: 0.21797621, g: 0.58724636, b: 0.6763317, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12684,6 +12684,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tunnel Piece_Plain 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5834472216228370178, guid: 01e03065fc7e0124fb3ad792a8a03aaa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834472216228370178, guid: 01e03065fc7e0124fb3ad792a8a03aaa, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01e03065fc7e0124fb3ad792a8a03aaa, type: 3}
 --- !u!114 &930690702 stripped
@@ -17587,7 +17595,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 638251440586143719, guid: 078b5cfcb0ddd71408b35e30816213b9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.271909
+      value: 1.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 638251440586143719, guid: 078b5cfcb0ddd71408b35e30816213b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 638251440586143719, guid: 078b5cfcb0ddd71408b35e30816213b9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 638251440586143719, guid: 078b5cfcb0ddd71408b35e30816213b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17845,6 +17861,14 @@ PrefabInstance:
     - target: {fileID: 5064725583567227628, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}
       propertyPath: m_Name
       value: Tunnel Piece_Plain
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834472216228370178, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834472216228370178, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}

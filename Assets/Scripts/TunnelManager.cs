@@ -204,7 +204,7 @@ public class TunnelManager : MonoBehaviour
         VisualsThatChangeBasedOnSpeed();
     }
 
-    void VisualsThatChangeBasedOnSpeed()
+    public void VisualsThatChangeBasedOnSpeed()
     {
         _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
 

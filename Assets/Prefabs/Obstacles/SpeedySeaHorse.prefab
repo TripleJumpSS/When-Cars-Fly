@@ -786,7 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -802,5 +802,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -5
-  DestroyOnContact: 0
+  ChangeSpeedByHowMuch: -9

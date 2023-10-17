@@ -311,8 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: 5
-  DestroyOnContact: 0
+  ChangeSpeedByHowMuch: -6
 --- !u!114 &6355658946867956627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +345,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1040746574177472852}
   - {fileID: 8489826802229657797}
-  speed: 7
+  speed: -7
 --- !u!1 &595324307313548721
 GameObject:
   m_ObjectHideFlags: 0
