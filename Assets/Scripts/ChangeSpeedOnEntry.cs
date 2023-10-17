@@ -9,6 +9,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     GameObject GameManager;
     bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
     //public bool DestroyOnContact;
+    public bool invincibilitystar; 
     AudioSource _hitSoundEffect;
     Renderer _renderer;
     
@@ -41,7 +42,9 @@ public class ChangeSpeedOnEntry : MonoBehaviour
             {TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch / 1.5f);}
 
             if (_hitSoundEffect != null)
-                _hitSoundEffect.Play();
+                {float randomPitch = Random.Range(0.75f,1.25f);
+                _hitSoundEffect.pitch = randomPitch;
+                _hitSoundEffect.Play();}
             else
                 Debug.LogError("Need to add audio source to object");
 
@@ -52,6 +55,12 @@ public class ChangeSpeedOnEntry : MonoBehaviour
             }
             else
                 Player.SendMessage("HIT");
+
+
+            if(invincibilitystar)
+            {
+                Player.SendMessage("invincibilitystar");
+            }
         }
     }
 }

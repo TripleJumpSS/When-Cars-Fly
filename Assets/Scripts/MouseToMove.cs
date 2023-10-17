@@ -15,6 +15,7 @@ public class MouseToMove : MonoBehaviour
 //Don't forget to set this to the camera in your game
 public GameObject mouseposition; public GameObject mousepositioncube;
 public Camera screenCamera;
+public GameObject invincibleparticles;
 
  
 //The desired distance from the camera to the object
@@ -25,6 +26,9 @@ public float invincibilityframestimer; public bool iFrames;
 
 void Start(){FrontFacing3D();}
 
+void invincibilitystar(){iFrames = true; invincibleparticles.SetActive(true);
+    invincibilityframestimer = 10;}
+
 void Update () 
 {
     var mousePos = Input.mousePosition;
@@ -33,7 +37,7 @@ void Update ()
     {invincibilityframestimer -= 1 * Time.deltaTime;}
 
     else if(invincibilityframestimer <= 0 && iFrames)
-    {iFrames = false;}
+    {iFrames = false; invincibleparticles.SetActive(false);}
    
     // Set the position of the transform to a position defined by the mouse
     // which is zDistance units away from the screenCamera
