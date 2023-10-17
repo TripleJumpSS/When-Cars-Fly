@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30254662, g: 0.79215145, b: 0.89868546, a: 1}
+  m_IndirectSpecularColor: {r: 0.24323413, g: 0.6552806, b: 0.75465274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -682,6 +682,7 @@ MonoBehaviour:
   - {fileID: 1416287828791227191, guid: 5522598ae706e0e4899fd752b0866bea, type: 3}
   - {fileID: 1416287828791227191, guid: 927f6b7ea16f09643ad94cdadbd2c1a9, type: 3}
   - {fileID: 1416287828791227191, guid: 0a4a6b30505d22142b41175f0468f2c8, type: 3}
+  - {fileID: 1416287828791227191, guid: debf84cbf24dc9145b8db1719dafd75f, type: 3}
   _stageTwoPieces:
   - {fileID: 1416287828791227191, guid: 906f88b33a6bba446b05bf6f6a10a3a2, type: 3}
   - {fileID: 1416287828791227191, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
@@ -694,6 +695,7 @@ MonoBehaviour:
   - {fileID: 1416287828791227191, guid: 5522598ae706e0e4899fd752b0866bea, type: 3}
   - {fileID: 1416287828791227191, guid: 927f6b7ea16f09643ad94cdadbd2c1a9, type: 3}
   - {fileID: 1416287828791227191, guid: 0a4a6b30505d22142b41175f0468f2c8, type: 3}
+  - {fileID: 1416287828791227191, guid: debf84cbf24dc9145b8db1719dafd75f, type: 3}
   _stageThreePieces:
   - {fileID: 1416287828791227191, guid: 906f88b33a6bba446b05bf6f6a10a3a2, type: 3}
   - {fileID: 1416287828791227191, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
@@ -706,6 +708,7 @@ MonoBehaviour:
   - {fileID: 1416287828791227191, guid: 5522598ae706e0e4899fd752b0866bea, type: 3}
   - {fileID: 1416287828791227191, guid: 927f6b7ea16f09643ad94cdadbd2c1a9, type: 3}
   - {fileID: 1416287828791227191, guid: 0a4a6b30505d22142b41175f0468f2c8, type: 3}
+  - {fileID: 1416287828791227191, guid: debf84cbf24dc9145b8db1719dafd75f, type: 3}
   _stageFourPieces:
   - {fileID: 1416287828791227191, guid: 906f88b33a6bba446b05bf6f6a10a3a2, type: 3}
   - {fileID: 1416287828791227191, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
@@ -718,6 +721,7 @@ MonoBehaviour:
   - {fileID: 1416287828791227191, guid: 5522598ae706e0e4899fd752b0866bea, type: 3}
   - {fileID: 1416287828791227191, guid: 927f6b7ea16f09643ad94cdadbd2c1a9, type: 3}
   - {fileID: 1416287828791227191, guid: 0a4a6b30505d22142b41175f0468f2c8, type: 3}
+  - {fileID: 1416287828791227191, guid: debf84cbf24dc9145b8db1719dafd75f, type: 3}
   _lastTunnelPiece: {fileID: 930690702}
   _mainTunnelList:
   - {fileID: 655233944}
