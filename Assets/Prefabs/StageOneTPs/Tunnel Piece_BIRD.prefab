@@ -1275,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pelican
       objectReference: {fileID: 0}
+    - target: {fileID: 3596084938220571017, guid: 41fbcb3b00b257e46a2402b8cef5fdbb, type: 3}
+      propertyPath: m_TagString
+      value: SpeedChanger
+      objectReference: {fileID: 0}
     - target: {fileID: 3596084938220571018, guid: 41fbcb3b00b257e46a2402b8cef5fdbb, type: 3}
       propertyPath: m_Radius
       value: 0.6
