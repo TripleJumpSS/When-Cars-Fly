@@ -46,7 +46,7 @@ public class TunnelManager : MonoBehaviour
     {
         _distanceUI.text =  _distanceTaken.ToString("F2");
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
-        SetSpeedToTwentyFive();
+        SetSpeedToThirty();
         VisualsThatChangeBasedOnSpeed();
         var emission = _playerSpeedParticles.emission;
             emission.rateOverTime = 0f;
@@ -163,14 +163,14 @@ public class TunnelManager : MonoBehaviour
         IsPieceDestroyed = isDestroyed;
     }
     //========== FOR TESTING PURPOSES ======================
-    [ContextMenu(nameof(SetSpeedToTwentyFive))]
-    void SetSpeedToTwentyFive()
+    [ContextMenu(nameof(SetSpeedToThirty))]
+    void SetSpeedToThirty()
     {
         foreach (var tunnelPiece in _mainTunnelList)
         {
-            tunnelPiece.SetSpeed(25.0f);
+            tunnelPiece.SetSpeed(30.0f);
         }
-        _speed = 25.0f;
+        _speed = 30.0f;
         VisualsThatChangeBasedOnSpeed();
     }
     [ContextMenu(nameof(SetSpeedToFifty))]
