@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.006190801, g: 0.016678479, b: 0.019208673, a: 1}
+  m_IndirectSpecularColor: {r: 0.0063290074, g: 0.017051376, b: 0.019637825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6421,6 +6421,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -1498862666163399614, guid: 6ff0ae4589abb5045aef4633907e1d85, type: 3}
+    - target: {fileID: 4191714310190992683, guid: 368393f9b1a9c7840ac8af597f29afdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368393f9b1a9c7840ac8af597f29afdc, type: 3}
 --- !u!4 &516498356 stripped
@@ -12585,6 +12589,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -1498862666163399614, guid: 6ff0ae4589abb5045aef4633907e1d85, type: 3}
+    - target: {fileID: 8794965055184613137, guid: f1787a2786c07b648a13ecb012ddc557, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1787a2786c07b648a13ecb012ddc557, type: 3}
 --- !u!1001 &836610226
@@ -12738,6 +12746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SharkParent: {fileID: 2006932441}
+  Player: {fileID: 919132147827435158}
 --- !u!65 &986036013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13114,6 +13123,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 126819395}
     m_Modifications:
+    - target: {fileID: -3051613294862717620, guid: a4a01195b684f3b4a82cbeda096d436f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1570429222830868, guid: a4a01195b684f3b4a82cbeda096d436f, type: 3}
       propertyPath: m_Name
       value: cliff_6
@@ -15941,7 +15954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784999343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122, y: 0, z: 0}
+  m_LocalPosition: {x: 143.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16032,6 +16045,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -1498862666163399614, guid: 5726443c5eb8d2f488c8046924fae657, type: 3}
+    - target: {fileID: 4191714310190992683, guid: 368393f9b1a9c7840ac8af597f29afdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368393f9b1a9c7840ac8af597f29afdc, type: 3}
 --- !u!1 &1808738944

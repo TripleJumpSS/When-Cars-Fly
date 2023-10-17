@@ -30,6 +30,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     {
         if(other.tag == "Player" && HaveIBeenUsedYet == false)
         {
+            if(Player.GetComponent<MouseToMove>().iFrames == true && ChangeSpeedByHowMuch <= 0){return;}
             HaveIBeenUsedYet = true;
             TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch);
 
