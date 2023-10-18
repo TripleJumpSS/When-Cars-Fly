@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Numerics;
 using UnityEditor;
 using UnityEngine;
@@ -37,6 +38,12 @@ public class SharkProximity : MonoBehaviour
         if(DistanceFromEnemy < 1){Chase();}
         if(DistanceFromEnemy > 10){DistanceFromEnemy = 10;}
 
+        if(PlayerSpeed >= Grellow){TunnelManager.GetComponent<TunnelManager>()._speed -= 0.4f * Time.deltaTime;}
+        if(PlayerSpeed >= Green){TunnelManager.GetComponent<TunnelManager>()._speed -= 0.2f * Time.deltaTime;}
+        if(PlayerSpeed < Grellow){TunnelManager.GetComponent<TunnelManager>().VisualsThatChangeBasedOnSpeed();}
+        if(PlayerSpeed < Yellow){TunnelManager.GetComponent<TunnelManager>()._speed += 0.4f * Time.deltaTime;}
+        if(PlayerSpeed < Orange){TunnelManager.GetComponent<TunnelManager>()._speed += 0.2f * Time.deltaTime;}
+
     if(Chased == false)
     {
         if(PlayerSpeed < Orange)//aka they're in the red.
@@ -48,9 +55,9 @@ public class SharkProximity : MonoBehaviour
         {CurrentColour = "YELLOW"; ColouredBackground.color = cYellow;}
 
         if(PlayerSpeed >= Grellow && PlayerSpeed < Green)//aka they're in the grellow.
-        {DistanceFromEnemy += 0.5f * Time.deltaTime; CurrentColour = "GRELLOW"; ColouredBackground.color = cGrellow;}
+        {DistanceFromEnemy += 0.40f * Time.deltaTime; CurrentColour = "GRELLOW"; ColouredBackground.color = cGrellow;}
         if(PlayerSpeed >= Green)//aka they're in the green.
-        {DistanceFromEnemy += 1 * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cGreen;}
+        {DistanceFromEnemy += 0.45f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cGreen;}
     }
 
     

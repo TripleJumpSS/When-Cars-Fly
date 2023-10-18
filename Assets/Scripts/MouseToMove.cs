@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
+//using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,18 +15,29 @@ public class MouseToMove : MonoBehaviour
 //Don't forget to set this to the camera in your game
 public GameObject mouseposition; public GameObject mousepositioncube;
 public Camera screenCamera;
+public GameObject invincibleparticles;
 
  
 //The desired distance from the camera to the object
 public float zDistance; public float StarterZ; public float lateralspeed;
 
-public string State; public float strength;
+public string State; public float strength; 
+public float invincibilityframestimer; public bool iFrames;
 
 void Start(){FrontFacing3D();}
+
+void invincibilitystar(){iFrames = true; invincibleparticles.SetActive(true);
+    invincibilityframestimer = 10;}
 
 void Update () 
 {
     var mousePos = Input.mousePosition;
+
+    if(invincibilityframestimer > 0 && iFrames)
+    {invincibilityframestimer -= 1 * Time.deltaTime;}
+
+    else if(invincibilityframestimer <= 0 && iFrames)
+    {iFrames = false; invincibleparticles.SetActive(false);}
    
     // Set the position of the transform to a position defined by the mouse
     // which is zDistance units away from the screenCamera
@@ -57,13 +70,15 @@ void Update ()
 
 public IEnumerator HIT()
 {
+    if(!iFrames)
+    iFrames = true;
+    invincibilityframestimer = 2;
     StarterZ = zDistance;
-    zDistance += 7;
+    zDistance += 6;
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", true);
     yield return new WaitForSeconds(0.5f);
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", false);
     yield return new WaitForSeconds(0.5f);
-    zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
@@ -123,6 +138,23 @@ public void SideScroll2D()
     screenCamera.transform.position = new Vector3(11.5f, -1, 5.1f);
     screenCamera.transform.rotation = Quaternion.Euler(-21, 180, 0);
     
+}
+
+public void FixZPositionOnTransition()
+{
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", false);
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
+    StopCoroutine("BOOST"); StopCoroutine("HIT");
+    
+    switch (State)
+    {
+        case "FrontFacing3D":  FrontFacing3D(); break;
+        case "BackFacing3D": BackFacing3D(); break;
+        case "TopDown2D": TopDown2D(); break;
+        case "SideScroll2D": SideScroll2D(); break;
+        
+        default: print("Don't panic but INVALID STATE FOR THE FIXZPOSITION ON THE PLAYER MOVEMENT SCRIPT! EVERYONE STAY CALMMMMMMMMMMMMMMMMMMMMMM!!!!"); break; 
+    }
 }
 
 }

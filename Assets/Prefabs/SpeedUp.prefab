@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3220287171635084597}
   - component: {fileID: 3220287171635084593}
   - component: {fileID: 2347896906904069677}
+  - component: {fileID: 5103689512696025511}
   m_Layer: 0
   m_Name: SpeedUp
   m_TagString: SpeedChanger
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220287171635084596}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.4099994, y: 0.501, z: 2.5}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3220287171635084599
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220287171635084596}
-  m_Mesh: {fileID: 4086857246173472812, guid: cdc379f78e97ace4585868e942285c89, type: 3}
+  m_Mesh: {fileID: -8803937527578110353, guid: 1b061e3694fd8d04483ba11bd8bf3c78, type: 3}
 --- !u!23 &3220287171635084598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96,8 +97,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.1
+  m_Radius: 0.02
+  m_Height: 0.02
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3220287171635084593
@@ -112,8 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: 3
-  DestroyOnContact: 1
+  ChangeSpeedByHowMuch: 2.5
 --- !u!82 &2347896906904069677
 AudioSource:
   m_ObjectHideFlags: 0
@@ -210,3 +210,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5103689512696025511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3220287171635084596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.98691547, g: 1, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
