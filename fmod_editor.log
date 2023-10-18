@@ -1,0 +1,811 @@
+[LOG] System::create                           : Header version = 2.02.18. Current version = 2.02.18.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::init                            : Initialize version=20218 (137105), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 00000180EAFC8068 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822A303C58, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822A303748, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822A303238, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303C58
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A311D18, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180F08A95B8, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180F08A9408, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181F7F88560
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A5E0838, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303C58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303748
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD2FC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303748
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303238
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD3240
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303238
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A311D18
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD2E80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A311D18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180F08A95B8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD3100
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180F08A95B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180F08A9408
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD3380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180F08A9408
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A5E0838
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000017F13DD2D40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A5E0838
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822A5E0D48, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A5E0D48
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A303E08, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A3033E8, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAE840
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180F08A9258, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A3114A8, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A32AC98, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A32A938, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A5E0D48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303E08
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAE980
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303E08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A3033E8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAE480
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A3033E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180F08A9258
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAEAC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180F08A9258
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A3114A8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAE5C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A3114A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A32AC98
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181A0CAE700
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A32AC98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A32A938
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180E94F39F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A32A938
+[LOG] SoundI::release                          : Hero's Strings (000001822A5E0838)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA3325A8)
+[LOG] SoundI::release                          :     Hero's Strings (000001821EA07A38)
+[LOG] SoundI::release                          : Hero's Xylophone (00000180F08A9408)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA331BE8)
+[LOG] SoundI::release                          :     Hero's Xylophone (000001821EA076D8)
+[LOG] SoundI::release                          : Soft Drums (00000180F08A95B8)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA32F008)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA449E88)
+[LOG] SoundI::release                          : Hard Drums (000001822A311D18)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA330388)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA449CD8)
+[LOG] SoundI::release                          : Serene Piano (000001822A303238)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA332408)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA44A038)
+[LOG] SoundI::release                          : Bubbly Base (000001822A303748)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA32F4E8)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA44A1E8)
+[LOG] SoundI::release                          : Hero's Mamba (000001822A303C58)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA3328E8)
+[LOG] SoundI::release                          :     Hero's Mamba (00000181A1014A98)
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001821EA07BE8, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001821EA07BE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001821EA07BE8
+[LOG] SoundI::release                          : Hero's Strings (000001822A32A938)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA32FD08)
+[LOG] SoundI::release                          :     Hero's Strings (00000181CD59E5C8)
+[LOG] SoundI::release                          : Hero's Xylophone (000001822A32AC98)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA32F9C8)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EB4E4768)
+[LOG] SoundI::release                          : Soft Drums (000001822A3114A8)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA32F348)
+[LOG] SoundI::release                          :     Soft Drums (00000180EB4E4C78)
+[LOG] SoundI::release                          : Hard Drums (00000180F08A9258)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA32ECC8)
+[LOG] SoundI::release                          :     Hard Drums (00000180EB4E4AC8)
+[LOG] SoundI::release                          : Serene Piano (000001822A3033E8)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA332268)
+[LOG] SoundI::release                          :     Serene Piano (00000180EB4E4918)
+[LOG] SoundI::release                          : Bubbly Base (000001822A303E08)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA3306C8)
+[LOG] SoundI::release                          :     Bubbly Base (000001821EA07BE8)
+[LOG] SoundI::release                          : Hero's Mamba (000001822A5E0D48)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA331F28)
+[LOG] SoundI::release                          :     Hero's Mamba (000001821EA07888)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000180EECA5E28, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180EECA5E28
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180EECA5258, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180EECA5408, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0A80
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180EECA5AC8, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001821E3D90A8, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001821E3D9918, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001821E3D9AC8, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180EECA5E28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180EECA5258
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0D00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180EECA5258
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180EECA5408
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0F80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180EECA5408
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180EECA5AC8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C01C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180EECA5AC8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001821E3D90A8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0580
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001821E3D90A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001821E3D9918
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0940
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001821E3D9918
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001821E3D9AC8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF7A9C20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001821E3D9AC8
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822A303238, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303238
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A303598, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A3033E8, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181F7F88560
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A3114A8, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822A311808, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000181A1015D38, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000181A1016098, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303238
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A303598
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF7327E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A303598
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A3033E8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF732A60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A3033E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A3114A8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF732920
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A3114A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822A311808
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF732E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822A311808
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000181A1015D38
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF732BA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000181A1015D38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000181A1016098
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF732CE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000181A1016098
+[LOG] SoundI::release                          : Hero's Strings (000001821E3D9AC8)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA331088)
+[LOG] SoundI::release                          :     Hero's Strings (00000180E7E3F228)
+[LOG] SoundI::release                          : Hero's Xylophone (000001821E3D9918)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA330048)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180E7E3F078)
+[LOG] SoundI::release                          : Soft Drums (000001821E3D90A8)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA330D48)
+[LOG] SoundI::release                          :     Soft Drums (00000180E7E3FA98)
+[LOG] SoundI::release                          : Hard Drums (00000180EECA5AC8)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA32FEA8)
+[LOG] SoundI::release                          :     Hard Drums (00000180E7E3F8E8)
+[LOG] SoundI::release                          : Serene Piano (00000180EECA5408)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA3325A8)
+[LOG] SoundI::release                          :     Serene Piano (00000180E7E3FC48)
+[LOG] SoundI::release                          : Bubbly Base (00000180EECA5258)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA330388)
+[LOG] SoundI::release                          :     Bubbly Base (00000180E7E3FDF8)
+[LOG] SoundI::release                          : Hero's Mamba (00000180EECA5E28)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA32EB28)
+[LOG] SoundI::release                          :     Hero's Mamba (00000181A1014A98)
+[LOG] SoundI::release                          : Hero's Strings (00000181A1016098)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA32F9C8)
+[LOG] SoundI::release                          :     Hero's Strings (00000180E99548E8)
+[LOG] SoundI::release                          : Hero's Xylophone (00000181A1015D38)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA32F008)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180E9954738)
+[LOG] SoundI::release                          : Soft Drums (000001822A311808)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA32F1A8)
+[LOG] SoundI::release                          :     Soft Drums (00000180E9954A98)
+[LOG] SoundI::release                          : Hard Drums (000001822A3114A8)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA332408)
+[LOG] SoundI::release                          :     Hard Drums (00000180E99543D8)
+[LOG] SoundI::release                          : Serene Piano (000001822A3033E8)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA32F4E8)
+[LOG] SoundI::release                          :     Serene Piano (00000180E7E3F738)
+[LOG] SoundI::release                          : Bubbly Base (000001822A303598)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA32F348)
+[LOG] SoundI::release                          :     Bubbly Base (00000180E7E3F588)
+[LOG] SoundI::release                          : Hero's Mamba (000001822A303238)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA3313C8)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180E7E3F3D8)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000180E8797368, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000180E8796CA8, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000180E8797008, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E8797368
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180E87976C8, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0580
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822B7CC798, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822B7CC5E8, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822B7CC438, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E8797368
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E8796CA8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0940
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E8796CA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E8797008
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0A80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E8797008
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E87976C8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0D00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E87976C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CC798
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C0F80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CC798
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CC5E8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000181CB4C01C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CC5E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CC438
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000180EF7A9C20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CC438
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001822B7CBF28, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CBF28
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822B7CC0D8, queue head = 00000180E9AECDF8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001822B7CCAF8, queue head = 00000180E9AECDF8, queue count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9A90
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180E8797A28, queue head = 00000180E9AECDF8, queue count = 2
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180E8797518, queue head = 00000180E9AECDF8, queue count = 3
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180E99543D8, queue head = 00000180E9AECDF8, queue count = 4
+[LOG] SystemI::createSound                     :     filename = ../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000180E9954078, queue head = 00000180E9AECDF8, queue count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Mamba', format=5, channels=2, frequency=48000, lengthbytes=549120, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CBF28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CC0D8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9950
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbly Base', format=5, channels=2, frequency=48000, lengthbytes=350528, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.289398.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CC0D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001822B7CCAF8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9D10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Serene Piano', format=5, channels=2, frequency=48000, lengthbytes=529216, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.425415.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001822B7CCAF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E8797A28
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9F90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hard Drums', format=5, channels=2, frequency=48000, lengthbytes=608096, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E8797A28
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E8797518
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D96D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Soft Drums', format=5, channels=2, frequency=48000, lengthbytes=606080, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250214.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E8797518
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E99543D8
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9BD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Xylophone', format=5, channels=2, frequency=48000, lengthbytes=363328, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E99543D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000180E9954078
+[LOG] SystemI::createSoundInternal             :     Create name='../../FMOD Studio/Fish Level Music/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3379680
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7136
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001821E3D9E50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hero's Strings', format=5, channels=2, frequency=48000, lengthbytes=370304, lengthpcm=2295270, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.491577.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000180E9954078
+[LOG] SoundI::release                          : Hero's Strings (000001822B7CC438)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA3320C8)
+[LOG] SoundI::release                          :     Hero's Strings (00000181F7BA7B68)
+[LOG] SoundI::release                          : Hero's Xylophone (000001822B7CC5E8)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA32F008)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000181F7BA7658)
+[LOG] SoundI::release                          : Soft Drums (000001822B7CC798)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA3313C8)
+[LOG] SoundI::release                          :     Soft Drums (00000181F7BA7808)
+[LOG] SoundI::release                          : Hard Drums (00000180E87976C8)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA331D88)
+[LOG] SoundI::release                          :     Hard Drums (00000181F7BA8078)
+[LOG] SoundI::release                          : Serene Piano (00000180E8797008)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA330D48)
+[LOG] SoundI::release                          :     Serene Piano (00000181F7BA7D18)
+[LOG] SoundI::release                          : Bubbly Base (00000180E8796CA8)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA331BE8)
+[LOG] SoundI::release                          :     Bubbly Base (00000181F7BA79B8)
+[LOG] SoundI::release                          : Hero's Mamba (00000180E8797368)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA3306C8)
+[LOG] SoundI::release                          :     Hero's Mamba (00000181A1014A98)
+[LOG] SoundI::release                          : Hero's Strings (00000180E9954078)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EA3301E8)
+[LOG] SoundI::release                          :     Hero's Strings (00000180EF732DF8)
+[LOG] SoundI::release                          : Hero's Xylophone (00000180E99543D8)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EA32FB68)
+[LOG] SoundI::release                          :     Hero's Xylophone (00000180EF732078)
+[LOG] SoundI::release                          : Soft Drums (00000180E8797518)
+[LOG] SoundI::release                          :     Soft Drums (00000180EA32EE68)
+[LOG] SoundI::release                          :     Soft Drums (00000180EF7323D8)
+[LOG] SoundI::release                          : Hard Drums (00000180E8797A28)
+[LOG] SoundI::release                          :     Hard Drums (00000180EA32EB28)
+[LOG] SoundI::release                          :     Hard Drums (00000180EF732228)
+[LOG] SoundI::release                          : Serene Piano (000001822B7CCAF8)
+[LOG] SoundI::release                          :     Serene Piano (00000180EA3325A8)
+[LOG] SoundI::release                          :     Serene Piano (00000181F7BA74A8)
+[LOG] SoundI::release                          : Bubbly Base (000001822B7CC0D8)
+[LOG] SoundI::release                          :     Bubbly Base (00000180EA32F1A8)
+[LOG] SoundI::release                          :     Bubbly Base (00000181F7BA8228)
+[LOG] SoundI::release                          : Hero's Mamba (000001822B7CBF28)
+[LOG] SoundI::release                          :     Hero's Mamba (00000180EA332408)
+[LOG] SoundI::release                          :     Hero's Mamba (00000181F7BA7EC8)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
