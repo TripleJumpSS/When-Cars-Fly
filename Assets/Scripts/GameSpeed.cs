@@ -27,6 +27,8 @@ public class GameSpeed : MonoBehaviour
 
     public void UnPause()
     {Time.timeScale = 1f; PauseScreen.SetActive(false);}
+    public void Home()
+    {Time.timeScale = 1f; SceneManager.LoadScene("Menu Scene");}
     public void GameOver()
     {Time.timeScale = 0f; GameOverScreen.SetActive(true); Points.text = DistanceUIText.text;}
     public void Retry()
