@@ -1410,7 +1410,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0, b: 0.45365334, a: 0.80784315}
+      maxColor: {r: 0, g: 0.34704685, b: 1, a: 0.80784315}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -13265,6 +13265,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6511219549512425945, guid: b57745b2eec86f641a3b9b9213d2cbc7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6214008581373438506, guid: 3b698fd586e93274e99fec96cb6836b4, type: 3}
+    - target: {fileID: -6511219549512425945, guid: b57745b2eec86f641a3b9b9213d2cbc7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 1716382798536679262, guid: 3b698fd586e93274e99fec96cb6836b4, type: 3}
+    - target: {fileID: -6511219549512425945, guid: b57745b2eec86f641a3b9b9213d2cbc7, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 3019647536304392061, guid: 3b698fd586e93274e99fec96cb6836b4, type: 3}
     - target: {fileID: -5817872019045063260, guid: b57745b2eec86f641a3b9b9213d2cbc7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 13.705674
@@ -25156,7 +25168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096369445368771575, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096369445368771579, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_Pivot.x
@@ -25266,12 +25278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &2083500705
 GameObject:
   m_ObjectHideFlags: 0
@@ -25906,7 +25912,7 @@ Transform:
   m_GameObject: {fileID: 919132147827435158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.4, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.44}
+  m_LocalScale: {x: 2, y: 2, z: 2.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7738370526406068416}
@@ -26435,12 +26441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!4 &7738370526251130978
 Transform:
   m_ObjectHideFlags: 0
@@ -26578,12 +26578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &7738370526319515560
 GameObject:
   m_ObjectHideFlags: 0
@@ -26721,12 +26715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!137 &7738370526324050760
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -26864,12 +26852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!4 &7738370526406068416
 Transform:
   m_ObjectHideFlags: 0
