@@ -165,6 +165,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2525009560592226604}
     m_Modifications:
+    - target: {fileID: 350229620545968463, guid: 28c31a40a594ff0469357864b0e79e17, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3691388252637787453, guid: 28c31a40a594ff0469357864b0e79e17, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -229,6 +233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sunken_Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 6582640096450688297, guid: 28c31a40a594ff0469357864b0e79e17, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a292764b4fcd5e84a8f7db65e0c4652d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28c31a40a594ff0469357864b0e79e17, type: 3}
 --- !u!4 &4629214943686759500 stripped

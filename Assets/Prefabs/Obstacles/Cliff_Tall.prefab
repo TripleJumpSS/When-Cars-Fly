@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSpeedByHowMuch: -5
-  DestroyOnContact: 0
+  invincibilitystar: 0
 --- !u!82 &2555025235998583533
 AudioSource:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ AudioSource:
   m_GameObject: {fileID: 8272030701611434971}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a292764b4fcd5e84a8f7db65e0c4652d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 726080e633c7be440a5df12a42488db0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
