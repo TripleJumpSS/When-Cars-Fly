@@ -36,6 +36,14 @@ public class ChangeSpeedOnEntry : MonoBehaviour
 
             HaveIBeenUsedYet = true;
             
+            if (ChangeSpeedByHowMuch > 0) //(DestroyOnContact == true)
+            {
+                //_renderer.enabled= false;
+                Player.SendMessage("BOOST");
+            }
+            else
+                Player.SendMessage("HIT");
+            
             TunnelManager.GetComponent<TunnelManager>().ChangeSpeed(ChangeSpeedByHowMuch);
             
             if(GameManager.GetComponent<SharkProximity>().Pinch && ChangeSpeedByHowMuch > 0)
@@ -47,14 +55,6 @@ public class ChangeSpeedOnEntry : MonoBehaviour
                 _hitSoundEffect.Play();}
             else
                 Debug.LogError("Need to add audio source to object");
-
-            if (ChangeSpeedByHowMuch > 0) //(DestroyOnContact == true)
-            {
-                //_renderer.enabled= false;
-                Player.SendMessage("BOOST");
-            }
-            else
-                Player.SendMessage("HIT");
 
 
             if(invincibilitystar)

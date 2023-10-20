@@ -90,16 +90,16 @@ public IEnumerator HIT()
 
 public IEnumerator BOOST()
 {
-    StarterZ = zDistance;
-    zDistance -= 5;
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", true);
-    yield return new WaitForSeconds(0.5f);
-    zDistance += 1; yield return new WaitForSeconds(0.1f);
+    StarterZ = zDistance;
+    zDistance -= 4;
+    yield return new WaitForSeconds(0.25f);
+    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
+    yield return new WaitForSeconds(0.25f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
     zDistance += 1;
-    transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
     
 }
 
