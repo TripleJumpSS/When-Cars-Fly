@@ -40,6 +40,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
             {
                 //_renderer.enabled= false;
                 Player.SendMessage("BOOST");
+                GameManager.SendMessage("GotRing");
             }
             else
                 Player.SendMessage("HIT");

@@ -269,8 +269,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4372709634541587298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5205, y: 16.9438, z: -0}
-  m_LocalScale: {x: 15.6157465, y: 33.24499, z: 8.02}
+  m_LocalPosition: {x: 12.5205, y: 10.9652, z: -0}
+  m_LocalScale: {x: 15.6157465, y: 21.290092, z: 8.02}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2643555556176735827}
@@ -380,8 +380,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7656717442981322768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 4.6, z: 0.4542}
-  m_LocalScale: {x: 50, y: 50, z: 13.184031}
+  m_LocalPosition: {x: -0.1, y: 11.4337, z: 0.4542}
+  m_LocalScale: {x: 50, y: 36.335, z: 13.184031}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2643555556176735827}
@@ -491,8 +491,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7798383712907438794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 23.1, z: -0}
-  m_LocalScale: {x: 15.6157465, y: 33.24499, z: 8.02}
+  m_LocalPosition: {x: -0.1, y: 11.8785, z: -0}
+  m_LocalScale: {x: 15.6157465, y: 15.233061, z: 8.02}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2643555556176735827}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 2783615516129180187}
   - component: {fileID: 3193867040181847047}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: enablesoutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,8 +601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8125654739392025458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.7647, y: 16.7881, z: 0}
-  m_LocalScale: {x: 21.053156, y: 32.9357, z: 8.02}
+  m_LocalPosition: {x: -12.7647, y: 10.8655, z: 0}
+  m_LocalScale: {x: 21.053156, y: 21.092022, z: 8.02}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2643555556176735827}
