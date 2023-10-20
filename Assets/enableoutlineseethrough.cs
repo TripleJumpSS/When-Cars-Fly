@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class enableoutlineseethrough : MonoBehaviour
 {
+    public bool disableOutline;
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !disableOutline)
         {
             other.transform.GetChild(0).gameObject.SendMessage("SeethroughDebris");
         }
@@ -14,7 +15,7 @@ public class enableoutlineseethrough : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && disableOutline)
         {
             other.transform.GetChild(0).gameObject.SendMessage("SeethroughOff");
         }
