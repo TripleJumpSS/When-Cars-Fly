@@ -2194,6 +2194,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5096369444822623295, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4698
+      objectReference: {fileID: 0}
     - target: {fileID: 5096369445368771575, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_Name
       value: TransitionCanvas
@@ -2287,8 +2291,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096369446322695601, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096369446322695601, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096369446322695601, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096369446322695601, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096369446322695602, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096369446344422783, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3775
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
