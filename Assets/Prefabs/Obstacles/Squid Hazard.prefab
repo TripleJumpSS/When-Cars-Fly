@@ -95,7 +95,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8123913109065859227}
   - component: {fileID: 8123913109065859228}
-  - component: {fileID: 5485064295240555006}
   m_Layer: 0
   m_Name: Mesh_LOD3
   m_TagString: Untagged
@@ -211,24 +210,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -9.313226e-10, y: -0.0006379066, z: 0.007267714}
     m_Extent: {x: 0.0044831317, y: 0.013533133, z: 0.0055109416}
   m_DirtyAABB: 0
---- !u!114 &5485064295240555006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123913109065859226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8123913109128966121
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8123913109128966122}
   - component: {fileID: 8123913109128966123}
-  - component: {fileID: 7710543956829479673}
   m_Layer: 0
   m_Name: Mesh_LOD2
   m_TagString: Untagged
@@ -355,24 +335,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -9.313226e-10, y: -0.0006379066, z: 0.007267714}
     m_Extent: {x: 0.0044831317, y: 0.013533133, z: 0.0055109416}
   m_DirtyAABB: 0
---- !u!114 &7710543956829479673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123913109128966121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8123913109367160257
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8123913109367160258}
   - component: {fileID: 8123913109367160259}
-  - component: {fileID: 5989051403136360066}
   m_Layer: 0
   m_Name: Mesh_LOD0
   m_TagString: Untagged
@@ -499,24 +460,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -9.313226e-10, y: -0.0006379066, z: 0.007267714}
     m_Extent: {x: 0.0044831317, y: 0.013533133, z: 0.0055109416}
   m_DirtyAABB: 0
---- !u!114 &5989051403136360066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123913109367160257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8123913109423524421
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +470,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8123913109423524422}
   - component: {fileID: 8123913109423524423}
-  - component: {fileID: 5775435093167109551}
   m_Layer: 0
   m_Name: Mesh_LOD1
   m_TagString: Untagged
@@ -643,24 +585,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -9.313226e-10, y: -0.0006379066, z: 0.007267714}
     m_Extent: {x: 0.0044831317, y: 0.013533133, z: 0.0055109416}
   m_DirtyAABB: 0
---- !u!114 &5775435093167109551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8123913109423524421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 10
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8123913110375220546
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSpeedByHowMuch: -6
+  invincibilitystar: 0
 --- !u!1 &8770675301524261026
 GameObject:
   m_ObjectHideFlags: 0

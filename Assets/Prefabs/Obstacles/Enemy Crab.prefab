@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 595324307093204041}
   - component: {fileID: 595324307093204040}
   - component: {fileID: 91737902557093688}
-  - component: {fileID: 6355658946867956627}
   - component: {fileID: 6251537785429511270}
   m_Layer: 0
   m_Name: Crab
@@ -312,24 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSpeedByHowMuch: -6
---- !u!114 &6355658946867956627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595324307093204054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 4
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
+  invincibilitystar: 0
 --- !u!114 &6251537785429511270
 MonoBehaviour:
   m_ObjectHideFlags: 0
