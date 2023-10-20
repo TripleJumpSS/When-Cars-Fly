@@ -239,6 +239,6 @@ public class TunnelManager : MonoBehaviour
                 emissionPlayer3.rateOverTime = _speed;
             }
 
-        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;    
+        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("SwimSpeed", _speed / 20);    
     }
 }
