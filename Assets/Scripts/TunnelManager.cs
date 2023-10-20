@@ -32,8 +32,9 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _plane;
     [SerializeField] GameObject gamemanager;
-    [SerializeField] ParticleSystem _bubbles;
-    [SerializeField] ParticleSystem _playerSpeedParticles;
+    [SerializeField] ParticleSystem _playerSpeedParticles1;
+    [SerializeField] ParticleSystem _playerSpeedParticles2;
+    [SerializeField] ParticleSystem _playerSpeedParticles3;
 
     public float MaxSpeedCap; public float MinSpeedCap;
 
@@ -48,9 +49,8 @@ public class TunnelManager : MonoBehaviour
         _rbDistanceMeter = _distanceMeter.GetComponent<Rigidbody>();
         SetSpeedToThirty();
         VisualsThatChangeBasedOnSpeed();
-        var emission = _playerSpeedParticles.emission;
-            emission.rateOverTime = 0f;
         _tunnelPieceGrabBag = new GrabBag<TunnelPiece>(_stageOnePieces);
+        VisualsThatChangeBasedOnSpeed();
     }
     void Update()
     {
@@ -211,21 +211,33 @@ public class TunnelManager : MonoBehaviour
     {
         _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
 
+        float orange = gamemanager.GetComponent<SharkProximity>().Orange;
         float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
-        var emissionBubble = _bubbles.emission;
-
-        if(_speed < yellow)
-            emissionBubble.rateOverTime = 0f;
-        else
-            emissionBubble.rateOverTime = _speed / 1.5f;
-
         float grellow = gamemanager.GetComponent<SharkProximity>().Grellow;
-        var emissionPlayer = _playerSpeedParticles.emission;
+        var emissionPlayer1 = _playerSpeedParticles1.emission;
+        var emissionPlayer2 = _playerSpeedParticles2.emission;
+        var emissionPlayer3 = _playerSpeedParticles3.emission;
+        
+        if(_speed < orange)
+            {
+                emissionPlayer1.rateOverTime = _speed;
+                emissionPlayer2.rateOverTime = 0f;
+                emissionPlayer3.rateOverTime = 0f;
+            }
 
-        if(_speed < grellow)
-            emissionPlayer.rateOverTime = 0f;
+        else if(_speed < yellow)
+            {
+                emissionPlayer1.rateOverTime = _speed * 2;
+                emissionPlayer2.rateOverTime = _speed;
+                emissionPlayer3.rateOverTime = 0f;
+            }
+
         else
-            emissionPlayer.rateOverTime = _speed;
+            {
+                emissionPlayer1.rateOverTime = _speed * 4;
+                emissionPlayer2.rateOverTime = _speed * 2;
+                emissionPlayer3.rateOverTime = _speed;
+            }
 
         _player.transform.GetChild(0).gameObject.GetComponent<Animator>().speed = _speed / 20;    
     }
