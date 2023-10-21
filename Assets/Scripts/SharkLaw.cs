@@ -15,12 +15,11 @@ public class SharkLaw : MonoBehaviour
     public float Lvl;
     public float Attacks;
 
-    void Awake(){Attacks = 0;}
     void Update()
     {
         if(Attacks > 2)
         {
-            Shark.GetComponent<Animator>().SetBool("FightIsOver", true);
+           Attacks = 0; Shark.GetComponent<Animator>().SetBool("FightIsOver", true);
         }
 
         if(TrackPlayer == true)
@@ -48,5 +47,5 @@ public class SharkLaw : MonoBehaviour
     public void Close(){distance = 23;}
     public void Far(){distance = 35;}
     public void AttackOver(){Attacks += 1;}
-    public void EndChase(){Lvl += 1; GameManager.GetComponent<SharkProximity>().SurvivedTheChase();}
+    public void EndChase(){Lvl += 1; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
 }
