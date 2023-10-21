@@ -10,17 +10,22 @@ public class SharkToggleTracking : MonoBehaviour
     public void TrackingOn()
     {SharkParent.SendMessage("Track");}
     public void TrackingTrick()
-    {SharkParent.SendMessage("Track");}
+    {SharkParent.SendMessage("TrickTrack");}
+    public void CloseIn()
+    {SharkParent.SendMessage("Close");}
+    public void BackOff()
+    {SharkParent.SendMessage("Far");}
+    
+    public void EndOfAttack()
+    {SharkParent.SendMessage("AttackOver");}
+
 
     public void TrackingOff()
     {SharkParent.SendMessage("StopTrack");}
 
     public void ChaseOff()
     {SharkParent.SendMessage("EndChase");}
-    public void CloseIn()
-    {SharkParent.SendMessage("Close");}
-    public void BackOff()
-    {SharkParent.SendMessage("Far");}
+
 
     public void RepairPlayerZPosition()
     {Player.SendMessage("FixZPositionOnTransition");}
