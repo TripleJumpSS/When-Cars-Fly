@@ -56,9 +56,10 @@ public class TunnelManager : MonoBehaviour
     {
         _rbDistanceMeter.velocity = _direction * _speed;
         if(GetDistancePlayerTaken() > 0)
-        {_distanceUI.text = "Points: " + GetDistancePlayerTaken().ToString("F2");}
+        _distanceUI.text = GetDistancePlayerTaken().ToString("F2");
         else
-        {_distanceUI.text = "Points: 00000";}
+        _distanceUI.text = "00000";
+
         _SpeedSlider.value = _speed;
 
         if (IsPieceDestroyed == true)
