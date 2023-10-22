@@ -17,7 +17,7 @@ public class TunnelPiece : MonoBehaviour
     }
     private void Update()
     {
-        _rb.velocity = _direction * _speed;
+        _rb.velocity = _direction * _speed * 2;
     }
     void OnTriggerEnter(Collider collision)
     {
