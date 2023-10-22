@@ -22,7 +22,7 @@ public class SharkEatBox : MonoBehaviour
     {
         if(InMahMouth && MouthIsOpen)
         {
-            other.gameObject.SetActive(false);
+            Player.SetActive(false);
             GameManager.GetComponent<GameManager>().GameOver();
         }
     }
