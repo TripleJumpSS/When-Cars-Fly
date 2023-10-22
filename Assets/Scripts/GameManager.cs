@@ -1,25 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameSpeed : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public GameObject PauseScreen;
-    public GameObject GameOverScreen;
+    [SerializeField] GameObject PauseScreen;
+    [SerializeField] GameObject GameOverScreen;
     public TMP_Text Points; public TMP_Text DistanceUIText; 
     void Start()
     {
         PauseScreen.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Pause()
@@ -32,7 +22,5 @@ public class GameSpeed : MonoBehaviour
     public void GameOver()
     {Time.timeScale = 0f; GameOverScreen.SetActive(true); Points.text = DistanceUIText.text;}
     public void Retry()
-    {
-        {Time.timeScale = 1f; SceneManager.LoadScene("Tunnel Scene");}
-    }
+    {Time.timeScale = 1f; SceneManager.LoadScene("Tunnel Scene");}
 }

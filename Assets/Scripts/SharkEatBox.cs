@@ -12,7 +12,7 @@ public class SharkEatBox : MonoBehaviour
         if(other.tag == "Player" && MouthIsOpen)
         {
             other.gameObject.SetActive(false);
-            GameManager.GetComponent<GameSpeed>().GameOver();
+            GameManager.GetComponent<GameManager>().GameOver();
         }
     }
 

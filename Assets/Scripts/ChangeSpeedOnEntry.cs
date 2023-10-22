@@ -11,7 +11,6 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     //public bool DestroyOnContact;
     public bool invincibilitystar; 
     AudioSource _hitSoundEffect;
-    Renderer _renderer;
     
     void Awake()
     {   
@@ -20,7 +19,6 @@ public class ChangeSpeedOnEntry : MonoBehaviour
         GameManager = GameObject.Find("Game Manager"); 
         Player = GameObject.Find("Player");
         _hitSoundEffect = GetComponent<AudioSource>();
-        _renderer = GetComponent<Renderer>();
 
         bool ChasingInProgress = GameManager.GetComponent<SharkProximity>().Chased;
         if (ChasingInProgress == true)
@@ -56,7 +54,6 @@ public class ChangeSpeedOnEntry : MonoBehaviour
                 _hitSoundEffect.Play();}
             else
                 Debug.LogError("Need to add audio source to object");
-
 
             if(invincibilitystar)
             {

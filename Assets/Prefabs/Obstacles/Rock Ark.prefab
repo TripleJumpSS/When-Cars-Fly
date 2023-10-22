@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3812796952397174340}
   - component: {fileID: 8091191454482764483}
   - component: {fileID: 4375528951763603651}
-  - component: {fileID: 2402748573718998566}
   - component: {fileID: 2477612428796589754}
+  - component: {fileID: 8641146767687105168}
   m_Layer: 0
   m_Name: Rock Ark
   m_TagString: SpeedChanger
@@ -131,20 +131,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 1.6790543, z: 4.929426}
   m_Center: {x: 1.1100001, y: 6.8767548, z: -0.30130327}
---- !u!114 &2402748573718998566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2646211110974209009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -8
-  invincibilitystar: 0
 --- !u!82 &2477612428796589754
 AudioSource:
   m_ObjectHideFlags: 0
@@ -241,6 +227,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8641146767687105168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646211110974209009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeSpeedByHowMuch: -30
+  invincibilitystar: 0
 --- !u!1 &4372709634541587298
 GameObject:
   m_ObjectHideFlags: 0
