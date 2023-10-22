@@ -39,9 +39,9 @@ public class TunnelManager : MonoBehaviour
     public float MaxSpeedCap; public float MinSpeedCap;
 
     bool _isNewStage = false;
-    int _stageTwoPoint =      500;
-    int _stageThreePoint =    1000;
-    int _stageFourPoint =     1500;
+    int _stageTwoPoint =      1500;
+    int _stageThreePoint =    2500;
+    int _stageFourPoint =     3500;
 
     void Awake()
     {
@@ -210,7 +210,7 @@ public class TunnelManager : MonoBehaviour
 
     public void VisualsThatChangeBasedOnSpeed()
     {
-        _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
+        _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10 * 2;
 
         float orange = gamemanager.GetComponent<SharkProximity>().Orange;
         float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
@@ -240,6 +240,6 @@ public class TunnelManager : MonoBehaviour
                 emissionPlayer3.rateOverTime = _speed;
             }
 
-        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("SwimSpeed", _speed / 20);    
+        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("SwimSpeed", _speed / 20 * 2);    
     }
 }
