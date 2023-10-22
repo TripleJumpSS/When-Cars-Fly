@@ -5,11 +5,22 @@ using UnityEngine;
 
 public class SharkEatBox : MonoBehaviour
 {
-    public GameObject GameManager;
+    public GameObject GameManager; public GameObject Player;
     public bool MouthIsOpen;
+    public bool InMahMouth;
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && MouthIsOpen)
+        if(other.tag == "Player")
+        {InMahMouth = true;}
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {InMahMouth = false;}
+    }
+    void Update()
+    {
+        if(InMahMouth && MouthIsOpen)
         {
             other.gameObject.SetActive(false);
             GameManager.GetComponent<GameManager>().GameOver();
@@ -17,6 +28,6 @@ public class SharkEatBox : MonoBehaviour
     }
 
     public void OpenYourMouth(){MouthIsOpen = true;}
-    public void CloseYourMouth(){MouthIsOpen = false;}
+    public void ShutYourMouth(){MouthIsOpen = false;}
 
 }

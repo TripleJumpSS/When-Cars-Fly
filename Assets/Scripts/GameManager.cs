@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text Points; public TMP_Text DistanceUIText; 
     void Start()
     {
+        Time.timeScale = 1f;
         PauseScreen.SetActive(false);
     }
 
