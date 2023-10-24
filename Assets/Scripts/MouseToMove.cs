@@ -89,9 +89,9 @@ public IEnumerator BOOST()
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", true);
     StarterZ = zDistance;
     zDistance -= 4;
-    yield return new WaitForSeconds(0.25f);
+    yield return new WaitForSeconds(0.1f);
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Boosting", false);
-    yield return new WaitForSeconds(0.25f);
+    yield return new WaitForSeconds(0.4f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
     zDistance += 1; yield return new WaitForSeconds(0.1f);
