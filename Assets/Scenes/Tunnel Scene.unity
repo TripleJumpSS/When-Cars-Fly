@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24323182, g: 0.6552777, b: 0.75464725, a: 1}
+  m_IndirectSpecularColor: {r: 0.24251637, g: 0.6533592, b: 0.75243914, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 919132147827435158}
   distance: 0
-  speed: 10
+  speed: 3
   Pos: {x: 0, y: 0, z: 0}
   TrackPlayer: 1
   GameManager: {fileID: 2023448513}
@@ -21689,8 +21689,8 @@ Transform:
   m_GameObject: {fileID: 1338839694}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: -24, y: -1.9, z: 70.10002}
-  m_LocalScale: {x: 12, y: 11.999986, z: 13.874399}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 5, y: 8.91, z: 13.874399}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230333704}
   - {fileID: 1782407615}
@@ -21712,7 +21712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed71b21b32a06144b22cd070460b16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SharkParent: {fileID: 2006932441}
+  SharkParent: {fileID: 58017914}
   DeathBall: {fileID: 1729418689}
   Player: {fileID: 919132147827435158}
 --- !u!95 &1338839697
@@ -29711,7 +29711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 2023448513}
   Player: {fileID: 919132147827435158}
-  MouthIsOpen: 0
+  MouthIsOpen: 1
   InMahMouth: 0
 --- !u!23 &1729418693
 MeshRenderer:

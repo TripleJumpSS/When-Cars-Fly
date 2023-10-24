@@ -11,7 +11,6 @@ public class SideSharkLaw : MonoBehaviour
     public bool TrackPlayer; //Whether or not the shark should copy the player's x/y position. Triggered by the SharkToggleTracking script.
     public GameObject GameManager;
     public GameObject Shark;
-    public float Lvl;
     public float Attacks;
 
     void Update()
@@ -27,6 +26,7 @@ public class SideSharkLaw : MonoBehaviour
             Pos = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
             
             //Transitions smoothly between the shark's current position and the Pos position. 
+            //transform.position = Vector3.Lerp(transform.position, Pos, speed * Time.deltaTime);
             transform.position = Pos;
         }
 
@@ -37,10 +37,9 @@ public class SideSharkLaw : MonoBehaviour
     }
 
     public void Track(){TrackPlayer = true;}
-    public void TrickTrack(){if(Lvl > 2)TrackPlayer = true;}
     public void StopTrack(){TrackPlayer = false;}
     public void Close(){distance = 23;}
     public void Far(){distance = 35;}
     public void AttackOver(){Attacks += 1;}
-    public void EndChase(){Lvl += 1; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
+    public void EndChase(){Attacks = 0; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
 }
