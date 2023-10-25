@@ -10,14 +10,14 @@ using UnityEngine.UI;
 
 public class SharkProximity : MonoBehaviour
 {
-    public float PlayerSpeed; public GameObject TunnelManager; public GameObject Player;
+    public float PlayerSpeed; public GameObject TunnelManager; public GameObject SharkManager; public GameObject Player;
     public float DistanceFromEnemy;
     public Slider SharkDistanceUI;
     public float Orange; public float Yellow; public float Grellow; public float Green;
     public string CurrentColour; public Image ColouredBackground;
     public Color cRed; public Color cOrange; public Color cYellow; public Color cGrellow; public Color cGreen;
     public bool Chased; public GameObject Shark;
-    public float Exposure; public bool Pinch;
+    public float Exposure; public bool Pinch; public GameObject Blood;
     //public GameObject RedLight;
 
     void Start()
@@ -63,9 +63,14 @@ public class SharkProximity : MonoBehaviour
     
 
         SharkDistanceUI.value = DistanceFromEnemy;
-        if(DistanceFromEnemy < 3 || Chased){Exposure = Mathf.Lerp(Exposure, 0.25f, 3 * Time.deltaTime); Pinch = true;}
-        else{Exposure = Mathf.Lerp(Exposure, 1.37f, 3 * Time.deltaTime); Pinch = false;}
+        if(DistanceFromEnemy < 3 || Chased){Exposure = Mathf.Lerp(Exposure, 0.25f, 3 * Time.deltaTime); Pinch = true; Blood.SetActive(true);}
+        else{Exposure = Mathf.Lerp(Exposure, 1.37f, 3 * Time.deltaTime); Pinch = false; Blood.SetActive(false);}
         RenderSettings.skybox.SetFloat("_Exposure", Exposure);
+
+        if(Pinch)
+        {
+            //Blood.GetComponent<Image>().Colour = 
+        }
 
     }
 
@@ -74,7 +79,7 @@ public class SharkProximity : MonoBehaviour
         DistanceFromEnemy = 1f;
         Player.SendMessage("BackFacing3D");
         Chased = true;
-        Shark.SetActive(true);
+        SharkManager.GetComponent<SharkManager>().beginchase();
 
         //This bit of the script takes every object tagged with SpeedChanger and then deletes them from the scene.
         GameObject[] speedupdownitems = GameObject.FindGameObjectsWithTag("SpeedChanger");
@@ -89,7 +94,7 @@ public class SharkProximity : MonoBehaviour
         DistanceFromEnemy = 5;
         Player.SendMessage("FrontFacing3D");
         Chased = false;
-        Shark.SetActive(false);
+        SharkManager.GetComponent<SharkManager>().endchase();
         
         TunnelManager.GetComponent<TunnelManager>().SetSpeedToYellow(Yellow);
     }

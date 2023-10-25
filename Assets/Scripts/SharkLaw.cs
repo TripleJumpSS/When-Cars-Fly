@@ -10,17 +10,10 @@ public class SharkLaw : MonoBehaviour
     public float speed; //How quickly the shark copies the player's x/y position.
     public Vector3 Pos; //The player's x position, y position, and distance is the z position.
     public bool TrackPlayer; //Whether or not the shark should copy the player's x/y position. Triggered by the SharkToggleTracking script.
-    public GameObject GameManager;
-    public GameObject Shark; public GameObject NextShark;
-    public float Attacks;
+    public GameObject SharkManager;
 
     void Update()
     {
-        if(Attacks > 2)
-        {
-           Attacks = 0; Shark.GetComponent<Animator>().SetBool("FightIsOver", true);
-           NextShark.transform.GetChild(0).GetComponent<Animator>().SetBool("FightIsOver", true);
-        }
 
         if(TrackPlayer == true)
         {
@@ -42,10 +35,8 @@ public class SharkLaw : MonoBehaviour
     }
 
     public void Track(){TrackPlayer = true;}
-    public void StopTrack(){TrackPlayer = false; NextShark.SetActive(true);}
+    public void StopTrack(){TrackPlayer = false;} //NextShark.SetActive(true);}
     public void Close(){distance = 23;}
     public void Far(){distance = 35;}
-    public void AttackOver(){Attacks += 1;}
-    public void EndChase(){Attacks = 0; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);
-    NextShark.SetActive(false); gameObject.SetActive(false);}
+    public void AttackOver(){SharkManager.GetComponent<SharkManager>().didattack();}
 }
