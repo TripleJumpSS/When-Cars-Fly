@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.3254902, g: 0.4509804, b: 0.38404104, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24251637, g: 0.6533592, b: 0.75243914, a: 1}
+  m_IndirectSpecularColor: {r: 0.0077007017, g: 0.020162165, b: 0.02287298, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,7 +175,6 @@ MonoBehaviour:
   TrackPlayer: 1
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 1338839694}
-  Lvl: 0
   Attacks: 0
 --- !u!1 &78181282
 GameObject:
@@ -11220,7 +11219,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -7552056961264319480, guid: 8b4a3d615a7559347b7f0c209cbf44ec, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7607726743665588824, guid: f114790dd73d5ba46899308b88880365, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f114790dd73d5ba46899308b88880365, type: 3}
 --- !u!1 &325619149
 GameObject:
@@ -11777,7 +11777,6 @@ MonoBehaviour:
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 1744511326}
   NextShark: {fileID: 58017914}
-  Lvl: 0
   Attacks: 0
 --- !u!1 &435089350
 GameObject:
@@ -21132,7 +21131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -355.4
+      value: -450.3
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31108,7 +31107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: 906f88b33a6bba446b05bf6f6a10a3a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -159.5
+      value: -229
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: 906f88b33a6bba446b05bf6f6a10a3a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31957,7 +31956,6 @@ MonoBehaviour:
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 919132147588394528}
   NextShark: {fileID: 417530880}
-  Lvl: 0
   Attacks: 0
 --- !u!4 &2006932443
 Transform:
@@ -33052,7 +33050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -236.6
+      value: -342.1
       objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: 811d324dfaaea7843b265d6b9dd67fa5, type: 3}
       propertyPath: m_LocalPosition.y
