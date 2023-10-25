@@ -210,7 +210,7 @@ public class TunnelManager : MonoBehaviour
 
     public void VisualsThatChangeBasedOnSpeed()
     {
-        _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10 * 2;
+        _plane.GetComponent<ScrollingTexture>().ScrollX = _speed / 10;
 
         float orange = gamemanager.GetComponent<SharkProximity>().Orange;
         float yellow = gamemanager.GetComponent<SharkProximity>().Yellow;
