@@ -104,8 +104,11 @@ public void FrontFacing3D()
 {
     State = "FrontFacing3D";
     zDistance = 10;
-    screenCamera.transform.position = new Vector3(18.5f, -1, -0.1f);
-    screenCamera.transform.rotation = Quaternion.Euler(-12, -90, 0);
+    //screenCamera.transform.position = new Vector3(18.5f, -1, -0.1f);
+    //screenCamera.transform.rotation = Quaternion.Euler(-12, -90, 0);
+    screenCamera.GetComponent<Animator>().SetBool("FaceBack", false);
+    screenCamera.GetComponent<Animator>().SetBool("FaceFront", true);
+    
     
 }
 
@@ -113,8 +116,11 @@ public void BackFacing3D()
 {
     State = "BackFacing3D";
     zDistance = 15;
-    screenCamera.transform.position = new Vector3(4.2f, 2, 0.1f);
-    screenCamera.transform.rotation = Quaternion.Euler(-21, 90, 0);
+    //screenCamera.transform.position = new Vector3(4.2f, 2, 0.1f);
+    //screenCamera.transform.rotation = Quaternion.Euler(-21, 90, 0);
+    screenCamera.GetComponent<Animator>().SetBool("FaceFront", false);
+    screenCamera.GetComponent<Animator>().SetBool("FaceBack", true);
+    
     
 }
 
