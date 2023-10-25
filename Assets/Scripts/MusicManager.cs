@@ -65,7 +65,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlayChase()
     {PreviousTrack = CurrentTrack; CurrentTrack = Chase;} 
-
+    
     public void Silence()
     {PreviousTrack = CurrentTrack; CurrentTrack = null;} 
     public void InvincibilityDrumsOn()

@@ -13,6 +13,7 @@ public class SharkManager : MonoBehaviour
     public GameObject GameManager;
     public GameObject StarterShark;
     public GameObject PostChaseText;
+    public GameManager MusicManager;
     void Start()
     {
         HowManySharks = 1;

@@ -47,9 +47,9 @@ public class SharkProximity : MonoBehaviour
     if(Chased == false)
     {
         if(PlayerSpeed < Orange)//aka they're in the red.
-        {DistanceFromEnemy -= 1f * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed; if(Pinch){DistanceFromEnemy += 0.20f * Time.deltaTime;}}
+        {DistanceFromEnemy -= 1f * Time.deltaTime; CurrentColour = "RED"; ColouredBackground.color = cRed; if(Pinch){DistanceFromEnemy += 0.65f * Time.deltaTime;}}
         if(PlayerSpeed >= Orange && PlayerSpeed < Yellow)//aka they're in the orange.
-        {DistanceFromEnemy -= 0.75f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange; if(Pinch){DistanceFromEnemy += 0.05f * Time.deltaTime;}}
+        {DistanceFromEnemy -= 0.75f * Time.deltaTime; CurrentColour = "ORANGE"; ColouredBackground.color = cOrange; if(Pinch){DistanceFromEnemy += 0.65f * Time.deltaTime;}}
 
         if(PlayerSpeed >= Yellow && PlayerSpeed < Grellow)//aka they're in the yellow.
         {CurrentColour = "YELLOW"; ColouredBackground.color = cYellow;}
@@ -93,7 +93,7 @@ public class SharkProximity : MonoBehaviour
     {
         DistanceFromEnemy = 5;
         Player.SendMessage("FrontFacing3D");
-        Chased = false;
+        Chased = false; Pinch = false;
         //SharkManager.SendMessage("endchase");
         
         TunnelManager.GetComponent<TunnelManager>().SetSpeedToYellow(Yellow);
