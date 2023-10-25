@@ -18,11 +18,11 @@ public GameObject invincibleparticles;
 public float zDistance; public float StarterZ; public float lateralspeed;
 
 public string State; public float strength; 
-public float invincibilityframestimer; public bool iFrames;
+public float invincibilityframestimer; public bool iFrames; public bool Invinciblestar;
 
 void Start(){FrontFacing3D();}
 
-void invincibilitystar(){iFrames = true; 
+void invincibilitystar(){iFrames = true; Invinciblestar = true;
     invincibilityframestimer = 10; transform.GetChild(0).gameObject.SendMessage("RainbowOutline");}
 
 void Update () 
@@ -33,7 +33,7 @@ void Update ()
     {invincibilityframestimer -= 1 * Time.deltaTime;}
 
     else if(invincibilityframestimer <= 0 && iFrames)
-    {iFrames = false; transform.GetChild(0).gameObject.SendMessage("RainbowOff");}
+    {iFrames = false; transform.GetChild(0).gameObject.SendMessage("RainbowOff"); Invinciblestar = false;}
    
     // Set the position of the transform to a position defined by the mouse
     // which is zDistance units away from the screenCamera
