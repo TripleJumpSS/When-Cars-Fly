@@ -8,6 +8,7 @@ public class SharkEatBox : MonoBehaviour
     public GameObject GameManager; public GameObject Player;
     public bool MouthIsOpen;
     public bool InMahMouth;
+    public bool Invincibility;
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -20,7 +21,9 @@ public class SharkEatBox : MonoBehaviour
     }
     void Update()
     {
-        if(InMahMouth && MouthIsOpen)
+        Invincibility = Player.GetComponent<MouseToMove>().iFrames;
+        
+        if(InMahMouth && MouthIsOpen && !Invincibility)
         {
             Player.SetActive(false);
             GameManager.GetComponent<GameManager>().GameOver();
