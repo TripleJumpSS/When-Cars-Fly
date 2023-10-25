@@ -79,7 +79,7 @@ public class SharkProximity : MonoBehaviour
         DistanceFromEnemy = 1f;
         Player.SendMessage("BackFacing3D");
         Chased = true;
-        SharkManager.GetComponent<SharkManager>().beginchase();
+        SharkManager.SendMessage("beginchase");
 
         //This bit of the script takes every object tagged with SpeedChanger and then deletes them from the scene.
         GameObject[] speedupdownitems = GameObject.FindGameObjectsWithTag("SpeedChanger");
@@ -94,7 +94,7 @@ public class SharkProximity : MonoBehaviour
         DistanceFromEnemy = 5;
         Player.SendMessage("FrontFacing3D");
         Chased = false;
-        SharkManager.GetComponent<SharkManager>().endchase();
+        //SharkManager.SendMessage("endchase");
         
         TunnelManager.GetComponent<TunnelManager>().SetSpeedToYellow(Yellow);
     }

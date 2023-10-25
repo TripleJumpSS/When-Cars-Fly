@@ -38,5 +38,5 @@ public class SharkLaw : MonoBehaviour
     public void StopTrack(){TrackPlayer = false;} //NextShark.SetActive(true);}
     public void Close(){distance = 23;}
     public void Far(){distance = 35;}
-    public void AttackOver(){SharkManager.GetComponent<SharkManager>().didattack();}
+    
 }

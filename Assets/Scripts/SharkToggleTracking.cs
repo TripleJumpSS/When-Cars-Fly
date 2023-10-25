@@ -5,6 +5,7 @@ using UnityEngine;
 public class SharkToggleTracking : MonoBehaviour
 {
     public GameObject SharkParent;
+    public GameObject SharkManager;
     public GameObject DeathBall;
     public GameObject Player;
     public void TrackingOn()
@@ -17,7 +18,7 @@ public class SharkToggleTracking : MonoBehaviour
     {SharkParent.SendMessage("Far");}
     
     public void EndOfAttack()
-    {SharkParent.SendMessage("AttackOver");}
+    {SharkManager.GetComponent<SharkManager>().didattack();}
 
 
     public void TrackingOff()
@@ -28,7 +29,7 @@ public class SharkToggleTracking : MonoBehaviour
 
 
     public void RepairPlayerZPosition()
-    {Player.SendMessage("FixZPositionOnTransition");}
+    {Player.SendMessage("FixZPositionOnTransition"); Player.transform.GetChild(0).SendMessage("SeethroughOff");}
 
 
     public void KillOn()

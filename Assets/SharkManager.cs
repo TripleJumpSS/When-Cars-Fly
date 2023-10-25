@@ -8,44 +8,47 @@ public class SharkManager : MonoBehaviour
     public float HowManySharks;
     public GameObject[] BackSharks;
     public GameObject[] SideSharks;
-    public float Attacked;
+    public float Attacked; public float MaxAttack;
     public GameObject GameManager;
     void Start()
     {
         HowManySharks = 1;
+        MaxAttack =3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Attacked > 2) 
-        {endchase();}
+        if(Attacked >= MaxAttack) 
+        {Attacked = 0; StartCoroutine(endchase());}
     }
 
     public IEnumerator beginchase()
     {
+        BackSharks[0].SetActive(true);
+        MaxAttack = 3;
+        yield return new WaitForSeconds(1f);
+        
         Attacked = 0;
-        BackSharks[1].SetActive(true);
-        yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 1)
-        {BackSharks[2].SetActive(true);}
-        yield return new WaitForSeconds(0.1f);
+        {BackSharks[1].SetActive(true); MaxAttack = 6;}
+        //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 2)
-        {SideSharks[1].SetActive(true);}
-        yield return new WaitForSeconds(0.1f);
+        {SideSharks[0].SetActive(true);}
+        //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 3)
-        {SideSharks[2].SetActive(true);}
-        yield return new WaitForSeconds(0.1f);
+        {SideSharks[1].SetActive(true);}
+        //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 4)
-        {SideSharks[3].SetActive(true);}
-        yield return new WaitForSeconds(0.1f);
+        {SideSharks[2].SetActive(true);}
+        //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 5)
-        {SideSharks[3].SetActive(true);}
+        {SideSharks[2].SetActive(true);}
         yield return new WaitForSeconds(0.1f);
     }
     public void didattack(){Attacked += 1;}
@@ -54,9 +57,9 @@ public class SharkManager : MonoBehaviour
     {
         GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); 
         foreach (var shark in BackSharks)
-        {shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
+        {shark.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("FightIsOver", false);}
         foreach (var shark in SideSharks)
-        {shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
+        {shark.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("FightIsOver", false);}
         
 
         yield return new WaitForSeconds(0.2f);
