@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -2
+  ChangeSpeedByHowMuch: -5
   invincibilitystar: 0
 --- !u!82 &3799221544914772747
 AudioSource:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -2
+  ChangeSpeedByHowMuch: -5
   invincibilitystar: 0
 --- !u!82 &3682674216908892154
 AudioSource:
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -2
+  ChangeSpeedByHowMuch: -5
   invincibilitystar: 0
 --- !u!82 &3009395770095202376
 AudioSource:
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdae9c7477da9a43b77c07e48d2524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeSpeedByHowMuch: -2
+  ChangeSpeedByHowMuch: -5
   invincibilitystar: 0
 --- !u!82 &954036850163054168
 AudioSource:
