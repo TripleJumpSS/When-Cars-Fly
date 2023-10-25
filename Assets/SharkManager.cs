@@ -8,13 +8,20 @@ public class SharkManager : MonoBehaviour
     public float HowManySharks;
     public GameObject[] BackSharks;
     public GameObject[] SideSharks;
+    public GameObject[] UISharkFaces;
     public float Attacked; public float MaxAttack;
     public GameObject GameManager;
+    public GameObject StarterShark;
+    public GameObject PostChaseText;
     void Start()
     {
         HowManySharks = 1;
-        MaxAttack =3;
+        MaxAttack = 3;
+
+        StartCoroutine(destroystartershark());
     }
+    public IEnumerator destroystartershark()
+    {yield return new WaitForSeconds(3f); Destroy(StarterShark);}
 
     // Update is called once per frame
     void Update()
@@ -36,15 +43,16 @@ public class SharkManager : MonoBehaviour
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 2)
-        {SideSharks[0].SetActive(true);}
+        {SideSharks[0].SetActive(true); MaxAttack = 12;}
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 3)
-        {SideSharks[1].SetActive(true);}
+        {SideSharks[1].SetActive(true); MaxAttack = 18;}
         //yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
 
         if(HowManySharks > 4)
-        {SideSharks[2].SetActive(true);}
+        {BackSharks[2].SetActive(true); MaxAttack = 24;}
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 5)
@@ -62,13 +70,30 @@ public class SharkManager : MonoBehaviour
         {shark.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("FightIsOver", false);}
         
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         foreach (var shark in BackSharks)
         {shark.SetActive(false);}
         foreach (var shark in SideSharks)
         {shark.SetActive(false);}
 
         HowManySharks += 1;
+
+        if(HowManySharks == 2){UISharkFaces[0].SetActive(true);}
+        if(HowManySharks == 3){UISharkFaces[1].SetActive(true);}
+        if(HowManySharks == 4){UISharkFaces[2].SetActive(true);}
+        if(HowManySharks == 5){UISharkFaces[3].SetActive(true);}
+        if(HowManySharks == 6){UISharkFaces[4].SetActive(true);}
+
+        yield return new WaitForSeconds(0.5f);
+
+        if(HowManySharks < BackSharks.Length + SideSharks.Length)
+        {
+            PostChaseText.SetActive(true);
+
+            yield return new WaitForSeconds(3.5f);
+
+            PostChaseText.SetActive(false);
+        }
         
     }
 }
