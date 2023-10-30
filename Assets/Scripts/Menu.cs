@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     Animator _animation;
-    float _transitionTime = 1.5f;
+    public float _transitionTime = 1.5f;
     public bool PlayTheEntryBite;
 
     private void Awake()
@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour
     public void PlayButton() 
     {
         StartCoroutine(LoadLevelWithTransition());
+        SceneManager.LoadScene("Tunnel Scene");
     }
 
     IEnumerator LoadLevelWithTransition() 

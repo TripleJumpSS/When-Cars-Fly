@@ -70,13 +70,11 @@ public IEnumerator HIT()
     iFrames = true;
     invincibilityframestimer = 2;
     StarterZ = zDistance;
-    zDistance += 6;
+    zDistance += 4;
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", true);
     yield return new WaitForSeconds(0.5f);
     transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("Recoiling", false);
     yield return new WaitForSeconds(0.5f);
-    zDistance -= 1; yield return new WaitForSeconds(0.2f);
-    zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);

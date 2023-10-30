@@ -17,7 +17,7 @@ public class SharkProximity : MonoBehaviour
     public string CurrentColour; public Image ColouredBackground;
     public Color cRed; public Color cOrange; public Color cYellow; public Color cGrellow; public Color cGreen;
     public bool Chased; public GameObject Shark;
-    public float Exposure; public bool Pinch; public GameObject Blood;
+    public float Exposure; public bool Pinch; //public GameObject Blood;
     //public GameObject RedLight;
 
     void Start()
@@ -63,8 +63,8 @@ public class SharkProximity : MonoBehaviour
     
 
         SharkDistanceUI.value = DistanceFromEnemy;
-        if(DistanceFromEnemy < 3 || Chased){Exposure = Mathf.Lerp(Exposure, 0.25f, 3 * Time.deltaTime); Pinch = true; Blood.SetActive(true);}
-        else{Exposure = Mathf.Lerp(Exposure, 1.37f, 3 * Time.deltaTime); Pinch = false; Blood.SetActive(false);}
+        if(DistanceFromEnemy < 3 || Chased){Exposure = Mathf.Lerp(Exposure, 0.25f, 3 * Time.deltaTime); Pinch = true;}// Blood.SetActive(true);}
+        else{Exposure = Mathf.Lerp(Exposure, 1.37f, 3 * Time.deltaTime); Pinch = false;}// Blood.SetActive(false);}
         RenderSettings.skybox.SetFloat("_Exposure", Exposure);
 
         if(Pinch)
