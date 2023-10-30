@@ -12,7 +12,7 @@ public class SharkManager : MonoBehaviour
     public float Attacked; public float MaxAttack;
     public GameObject GameManager;
     public GameObject StarterShark;
-    public GameObject PostChaseText;
+    public GameObject PreChaseText; public GameObject PostChaseText;
     public GameManager MusicManager;
     void Start()
     {
@@ -33,11 +33,19 @@ public class SharkManager : MonoBehaviour
 
     public IEnumerator beginchase()
     {
+
+            PreChaseText.SetActive(true);
+
+            yield return new WaitForSeconds(3.5f);
+
+            PreChaseText.SetActive(false);
+
         BackSharks[0].SetActive(true);
+
         MaxAttack = 3;
-        yield return new WaitForSeconds(1f);
-        
         Attacked = 0;
+        
+        yield return new WaitForSeconds(1f);
 
         if(HowManySharks > 1)
         {BackSharks[1].SetActive(true); MaxAttack = 6;}
