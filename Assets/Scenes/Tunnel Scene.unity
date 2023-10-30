@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0077007124, g: 0.020162167, b: 0.022872988, a: 1}
+  m_IndirectSpecularColor: {r: 0.0061907843, g: 0.016678449, b: 0.019208595, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12064,8 +12064,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00.00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
-  m_sharedMaterial: {fileID: -4560941309336299144, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -27745,10 +27745,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenCamera: {fileID: 1012470674}
   zDistance: 12
-  xMin: 600
-  xMax: 2000
-  yMin: 300
-  yMax: 750
+  xMin: 900
+  xMax: 1400
+  yMin: 350
+  yMax: 700
 --- !u!135 &1388005348
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30536,8 +30536,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Points: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
-  m_sharedMaterial: {fileID: -4560941309336299144, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36084,6 +36084,60 @@ Transform:
   m_Father: {fileID: 1204138037}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 89.98021, y: 0, z: 0}
+--- !u!1 &1693035358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693035361}
+  - component: {fileID: 1693035360}
+  - component: {fileID: 1693035359}
+  m_Layer: 0
+  m_Name: HazardBreaker
+  m_TagString: HazardBreaker
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1693035359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693035358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1693035360
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693035358}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1693035361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693035358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.96, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 30, z: 39}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696333352
 GameObject:
   m_ObjectHideFlags: 0
@@ -38030,8 +38084,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'RINGS:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
-  m_sharedMaterial: {fileID: -4560941309336299144, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -38942,8 +38996,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
-  m_sharedMaterial: {fileID: -4560941309336299144, guid: 13cdb4ecd450f4d4b82cc8ad17274eea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -39508,7 +39562,6 @@ MonoBehaviour:
   Shark: {fileID: 2006932441}
   Exposure: 0
   Pinch: 0
-  Blood: {fileID: 1417627568}
 --- !u!114 &2023448517
 MonoBehaviour:
   m_ObjectHideFlags: 0

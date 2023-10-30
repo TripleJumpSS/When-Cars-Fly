@@ -21,8 +21,8 @@ public class outlinecolour : MonoBehaviour
     }
         public void SeethroughDebris()
     {
-        GetComponent<Outline>().enabled = true;
-        Seethrough = true;
+        //GetComponent<Outline>().enabled = true;
+        //Seethrough = true;
     }
     public void SeethroughOff()
     {

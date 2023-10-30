@@ -60,5 +60,8 @@ public class ChangeSpeedOnEntry : MonoBehaviour
                 Player.SendMessage("invincibilitystar");
             }
         }
+
+        if(other.tag == "HazardBreaker" && ChangeSpeedByHowMuch < 0)
+        {Destroy(gameObject);}
     }
 }
