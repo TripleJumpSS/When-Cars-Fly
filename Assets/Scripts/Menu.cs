@@ -7,16 +7,19 @@ public class Menu : MonoBehaviour
     Animator _animation;
     public float _transitionTime = 1.5f;
     public bool PlayTheEntryBite;
+    public GameObject notcrossfade;
 
     private void Awake()
     {
         _animation = GetComponent<Animator>();
         if(PlayTheEntryBite)_animation.SetTrigger("AnimOnAwake");
+        notcrossfade.SetActive(false);
     }
     public void PlayButton() 
     {
+        notcrossfade.SetActive(true);
+        //SceneManager.LoadScene("Tunnel Scene");
         StartCoroutine(LoadLevelWithTransition());
-        SceneManager.LoadScene("Tunnel Scene");
     }
 
     IEnumerator LoadLevelWithTransition() 
