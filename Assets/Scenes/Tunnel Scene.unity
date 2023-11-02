@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24323413, g: 0.65528065, b: 0.7546537, a: 1}
+  m_IndirectSpecularColor: {r: 0.24323402, g: 0.6552804, b: 0.7546519, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25317,6 +25317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeSpeedByHowMuch: -1
+  Particle: {fileID: 0}
   invincibilitystar: 0
 --- !u!1 &1119282874
 GameObject:
@@ -26532,6 +26533,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1066688006}
     m_Modifications:
+    - target: {fileID: 2913323748578987365, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913323748578987365, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.26
+      objectReference: {fileID: 0}
     - target: {fileID: 4176004870412368602, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -26583,6 +26592,10 @@ PrefabInstance:
     - target: {fileID: 5064725583567227628, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076489455293758333, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d385421a03c11ec43b3fb518fe7943ac, type: 3}
@@ -40243,7 +40256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096369445368771575, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096369445368771579, guid: 9cd8f6e9b44f3a445ac9eb59af7d9388, type: 3}
       propertyPath: m_Pivot.x

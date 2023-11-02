@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squid Hazard_2
       objectReference: {fileID: 0}
+    - target: {fileID: 2573577571496025543, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4948114065210386148, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3001,6 +3005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Squid Hazard_3
       objectReference: {fileID: 0}
+    - target: {fileID: 2573577571496025543, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4948114065210386148, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -4836,6 +4844,10 @@ PrefabInstance:
     - target: {fileID: 2573577571496025543, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
       propertyPath: m_Name
       value: Squid Hazard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573577571496025543, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4948114065210386148, guid: 232e39c6369b8a0488b8e1546198415e, type: 3}
       propertyPath: m_RootOrder

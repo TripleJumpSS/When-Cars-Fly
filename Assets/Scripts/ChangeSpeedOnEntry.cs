@@ -7,6 +7,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
     GameObject TunnelManager;  
     GameObject Player;
     GameObject GameManager;
+    public GameObject Particle;
     bool HaveIBeenUsedYet; //Stops the player from triggering the same object multiple times.
     //public bool DestroyOnContact;
     public bool invincibilitystar; 
@@ -39,6 +40,7 @@ public class ChangeSpeedOnEntry : MonoBehaviour
                 //_renderer.enabled= false;
                 Player.SendMessage("BOOST");
                 GameManager.SendMessage("GotRing");
+                Particle.SetActive(true);
             }
             else
                 Player.SendMessage("HIT");
