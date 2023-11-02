@@ -58,7 +58,7 @@ public class TunnelManager : MonoBehaviour
         if(GetDistancePlayerTaken() > 0)
         _distanceUI.text = GetDistancePlayerTaken().ToString("F2");
         else
-        _distanceUI.text = "00000";
+        _distanceUI.text = "00.00";
 
         _SpeedSlider.value = _speed;
 
@@ -240,6 +240,6 @@ public class TunnelManager : MonoBehaviour
                 emissionPlayer3.rateOverTime = _speed;
             }
 
-        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("SwimSpeed", _speed / 20 * 2);    
+        _player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("SwimSpeed", _speed / 20 * 1.5f);    
     }
 }
