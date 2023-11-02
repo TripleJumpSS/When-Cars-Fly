@@ -15,6 +15,7 @@ public class SharkManager : MonoBehaviour
     public GameObject PreChaseText; public GameObject PostChaseText;
     public GameManager MusicManager;
     public GameObject target1; public GameObject target2; public GameObject target3;
+    public GameObject dtarget1; public GameObject dtarget2; public GameObject dtarget3;
     void Start()
     {
         HowManySharks = 1;
@@ -53,11 +54,11 @@ public class SharkManager : MonoBehaviour
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 2)
-        {SideSharks[0].SetActive(true); MaxAttack = 12;}
+        {SideSharks[0].SetActive(true); MaxAttack = 12; dtarget1.SetActive(true);}
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 3)
-        {SideSharks[1].SetActive(true); MaxAttack = 18;}
+        {SideSharks[1].SetActive(true); MaxAttack = 18; dtarget2.SetActive(true);}
         //yield return new WaitForSeconds(0.1f);
         yield return new WaitForSeconds(0.5f);
 
@@ -66,7 +67,7 @@ public class SharkManager : MonoBehaviour
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 5)
-        {SideSharks[2].SetActive(true);}
+        {SideSharks[2].SetActive(true); dtarget3.SetActive(true);}
         yield return new WaitForSeconds(0.1f);
     }
     public void didattack(){Attacked += 1;}
@@ -81,6 +82,9 @@ public class SharkManager : MonoBehaviour
         target1.SetActive(false);
         target2.SetActive(false);
         target3.SetActive(false);
+        dtarget1.SetActive(false);
+        dtarget2.SetActive(false);
+        dtarget3.SetActive(false);
         
 
         yield return new WaitForSeconds(0.5f);

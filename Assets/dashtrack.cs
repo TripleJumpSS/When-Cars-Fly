@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.Android.Types;
 using UnityEngine;
 
-public class targettrack : MonoBehaviour
+public class dashtrack : MonoBehaviour
 {
     public bool TargetTracking;
-    public GameObject image;
     public Transform player;
+    public Transform shark;
+    public GameObject image;
     void Start()
     {
         
@@ -17,7 +16,7 @@ public class targettrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(TargetTracking){transform.position = new Vector3(15, player.position.y, player.position.z);}
+        if(TargetTracking){transform.position = new Vector3(15, shark.position.y, player.position.z);}
         
     }
 

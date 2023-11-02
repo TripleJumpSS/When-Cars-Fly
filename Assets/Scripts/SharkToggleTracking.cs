@@ -8,20 +8,20 @@ public class SharkToggleTracking : MonoBehaviour
     public GameObject SharkManager;
     public GameObject DeathBall;
     public GameObject Player; public GameObject target;
-    public bool IAmSharkOne; public bool IAmABackShark;
+    public bool IAmSharkOne;
     public void TrackingOn()
     {SharkParent.SendMessage("Track");}
     public void CloseIn()
     {SharkParent.SendMessage("Close");}
     public void BackOff()
-    {SharkParent.SendMessage("Far"); if(IAmABackShark){target.SendMessage("targettrackon");}}
+    {SharkParent.SendMessage("Far"); target.SendMessage("displayon"); target.SendMessage("targettrackon");}
     
     public void EndOfAttack()
-    {SharkManager.GetComponent<SharkManager>().didattack();}
+    {SharkManager.GetComponent<SharkManager>().didattack(); target.SendMessage("displayoff");}
 
 
     public void TrackingOff()
-    {SharkParent.SendMessage("StopTrack"); if(IAmABackShark){target.SendMessage("targettrackoff");}}
+    {SharkParent.SendMessage("StopTrack"); target.SendMessage("targettrackoff");}
 
     public void ChaseOff()
     {SharkParent.SendMessage("EndChase");}

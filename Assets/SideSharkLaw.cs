@@ -38,8 +38,8 @@ public class SideSharkLaw : MonoBehaviour
 
     public void Track(){TrackPlayer = true;}
     public void StopTrack(){TrackPlayer = false;}
-    public void Close(){distance = 23;}
-    public void Far(){distance = 35;}
+    public void Close(){}
+    public void Far(){}
     public void AttackOver(){Attacks += 1;}
     public void EndChase(){Attacks = 0; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
 }
