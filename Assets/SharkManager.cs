@@ -14,6 +14,7 @@ public class SharkManager : MonoBehaviour
     public GameObject StarterShark;
     public GameObject PreChaseText; public GameObject PostChaseText;
     public GameManager MusicManager;
+    public GameObject target1; public GameObject target2; public GameObject target3;
     void Start()
     {
         HowManySharks = 1;
@@ -40,7 +41,7 @@ public class SharkManager : MonoBehaviour
 
             PreChaseText.SetActive(false);
 
-        BackSharks[0].SetActive(true);
+        BackSharks[0].SetActive(true); target1.SetActive(true);
 
         MaxAttack = 3;
         Attacked = 0;
@@ -48,7 +49,7 @@ public class SharkManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         if(HowManySharks > 1)
-        {BackSharks[1].SetActive(true); MaxAttack = 6;}
+        {BackSharks[1].SetActive(true); MaxAttack = 6; target2.SetActive(true);}
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 2)
@@ -61,7 +62,7 @@ public class SharkManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         if(HowManySharks > 4)
-        {BackSharks[2].SetActive(true); MaxAttack = 24;}
+        {BackSharks[2].SetActive(true); MaxAttack = 24; target3.SetActive(true);}
         //yield return new WaitForSeconds(0.1f);
 
         if(HowManySharks > 5)
@@ -77,6 +78,9 @@ public class SharkManager : MonoBehaviour
         {shark.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("FightIsOver", false);}
         foreach (var shark in SideSharks)
         {shark.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("FightIsOver", false);}
+        target1.SetActive(false);
+        target2.SetActive(false);
+        target3.SetActive(false);
         
 
         yield return new WaitForSeconds(0.5f);

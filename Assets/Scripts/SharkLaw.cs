@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SharkLaw : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class SharkLaw : MonoBehaviour
     public Vector3 Pos; //The player's x position, y position, and distance is the z position.
     public bool TrackPlayer; //Whether or not the shark should copy the player's x/y position. Triggered by the SharkToggleTracking script.
     public GameObject SharkManager;
+    public float bitelevel; public bool bitelevelmaxoutatstart;
+
+    void Start()
+    {
+        if(bitelevelmaxoutatstart){bitelevel = 3;}
+        else{bitelevel = 1;}
+    }
 
     void Update()
     {
@@ -35,8 +43,20 @@ public class SharkLaw : MonoBehaviour
     }
 
     public void Track(){TrackPlayer = true;}
-    public void StopTrack(){TrackPlayer = false;} //NextShark.SetActive(true);}
+    public void StopTrack()
+    {
+        TrackPlayer = false;
+        switch (bitelevel)
+        {
+            case 1: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 0.5f); break;
+            case 2: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 0.75f); break;
+            case 3: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 1f); break;
+            
+            default: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 1f); break;
+        }
+    }
     public void Close(){distance = 23;}
     public void Far(){distance = 35;}
+    public void LevelUp(){bitelevel += 1;}
     
 }
