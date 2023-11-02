@@ -9,7 +9,7 @@ public class MouseToMove : MonoBehaviour
  
 //Define the camera that we will use
 //Don't forget to set this to the camera in your game
-public GameObject mouseposition; public GameObject mousepositioncube;
+public GameObject mouseposition; public GameObject boom;
 public Camera screenCamera;
 public GameObject invincibleparticles;
 
@@ -67,6 +67,7 @@ void Update ()
 public IEnumerator HIT()
 {
     if(!iFrames)
+    boom.SetActive(true);
     iFrames = true;
     invincibilityframestimer = 2;
     StarterZ = zDistance;
@@ -79,6 +80,7 @@ public IEnumerator HIT()
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1; yield return new WaitForSeconds(0.2f);
     zDistance -= 1;
+    boom.SetActive(false);
     
 }
 
