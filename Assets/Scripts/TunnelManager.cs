@@ -37,6 +37,7 @@ public class TunnelManager : MonoBehaviour
     [SerializeField] ParticleSystem _playerSpeedParticles3;
 
     public float MaxSpeedCap; public float MinSpeedCap;
+    public float GameSpeed;
 
     bool _isNewStage = false;
     int _stageTwoPoint =      1500;
@@ -51,6 +52,7 @@ public class TunnelManager : MonoBehaviour
         VisualsThatChangeBasedOnSpeed();
         _tunnelPieceGrabBag = new GrabBag<TunnelPiece>(_stageOnePieces);
         VisualsThatChangeBasedOnSpeed();
+        GameSpeed = 1;
     }
     void Update()
     {
@@ -79,6 +81,9 @@ public class TunnelManager : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.S)) DownSpeed(10);
 
         CheckAndSetSpeedCaps();
+
+        if(GameSpeed < 1){GameSpeed = 1;}
+        if(GameSpeed > 1.75f){GameSpeed = 1.75f;}
     }
 
     void CheckAndSetSpeedCaps()
@@ -195,6 +200,7 @@ public class TunnelManager : MonoBehaviour
             tunnelPiece.UpSpeed(changeBy);
         }
         _speed += changeBy;
+        GameSpeed += changeBy / 100;
         VisualsThatChangeBasedOnSpeed();
     }
 
