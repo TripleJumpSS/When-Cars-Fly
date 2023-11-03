@@ -33,6 +33,8 @@ public class SharkToggleTracking : MonoBehaviour
 
     public void KillOn()
     {DeathBall.SendMessage("OpenYourMouth"); if(IAmSharkOne){SendMessageUpwards("LevelUp");}}
+    public void lvlup()
+    {if(IAmSharkOne){SendMessageUpwards("LevelUp");}}
     public void KillOff()
     {DeathBall.SendMessage("ShutYourMouth");}
 }

@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+/*
 namespace CartoonFX
 {
     [InitializeOnLoad]
@@ -73,3 +73,4 @@ namespace CartoonFX
         }
     }
 }
+*/

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0061907973, g: 0.016678466, b: 0.019208627, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -504,6 +504,8 @@ MonoBehaviour:
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 1338839694}
   Attacks: 0
+  bitelevel: 1
+  bitelevelmaxoutatstart: 0
 --- !u!1 &60105507
 GameObject:
   m_ObjectHideFlags: 0
@@ -24466,6 +24468,8 @@ MonoBehaviour:
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 1807216692}
   Attacks: 0
+  bitelevel: 3
+  bitelevelmaxoutatstart: 1
 --- !u!1 &1020352174
 GameObject:
   m_ObjectHideFlags: 0
@@ -27945,7 +27949,7 @@ MonoBehaviour:
   DeathBall: {fileID: 1729418689}
   Player: {fileID: 919132147827435158}
   target: {fileID: 219814760}
-  IAmSharkOne: 0
+  IAmSharkOne: 1
 --- !u!95 &1338839697
 Animator:
   serializedVersion: 4
@@ -29557,6 +29561,8 @@ MonoBehaviour:
   GameManager: {fileID: 2023448513}
   Shark: {fileID: 2069123665}
   Attacks: 0
+  bitelevel: 3
+  bitelevelmaxoutatstart: 1
 --- !u!1 &1408776727
 GameObject:
   m_ObjectHideFlags: 0

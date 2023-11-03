@@ -13,6 +13,13 @@ public class SideSharkLaw : MonoBehaviour
     public GameObject Shark;
     public float Attacks;
 
+    public float bitelevel; public bool bitelevelmaxoutatstart;
+
+    void Start()
+    {
+        if(bitelevelmaxoutatstart){bitelevel = 3;}
+        else{bitelevel = 1;}
+    }
     void Update()
     {
         if(Attacks > 2)
@@ -37,9 +44,21 @@ public class SideSharkLaw : MonoBehaviour
     }
 
     public void Track(){TrackPlayer = true;}
-    public void StopTrack(){TrackPlayer = false;}
+    public void StopTrack()
+    {
+        TrackPlayer = false;
+        switch (bitelevel)
+        {
+            case 1: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 0.5f); break;
+            case 2: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 0.75f); break;
+            case 3: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 1f); break;
+            
+            default: transform.GetChild(0).gameObject.GetComponent<Animator>().SetFloat("BiteSpeed", 1f); break;
+        }
+    }
     public void Close(){}
     public void Far(){}
     public void AttackOver(){Attacks += 1;}
     public void EndChase(){Attacks = 0; GameManager.GetComponent<SharkProximity>().SurvivedTheChase(); Shark.GetComponent<Animator>().SetBool("FightIsOver", false);}
+    public void LevelUp(){bitelevel += 1;}
 }
