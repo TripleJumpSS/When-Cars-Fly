@@ -17,8 +17,28 @@ public float zDistance;
 
 public float xMin; public float xMax;
 public float yMin; public float yMax;
+public bool Mobile;
 
-
+void Start()
+{
+    
+    if(Mobile)
+    {
+        xMin = 905;
+        yMax = 1405;
+        yMin = 345;
+        yMax = 705;
+    }
+    
+    else
+    {
+        xMin = 705;
+        xMax = 1205;
+        yMin = 345;
+        yMax = 705;
+    }
+    
+}
 
 void Update () 
 {

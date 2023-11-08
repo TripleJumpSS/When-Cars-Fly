@@ -56,4 +56,9 @@ public class Menu : MonoBehaviour
 
     }
 
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+
 }
